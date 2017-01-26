@@ -1,83 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<style>
-/* Center the loader */
-#loader {
-  position: absolute;
-  display: block;
-}
-#video_box {
-    position:relative;
-}
-#video_overlays {
-    position:absolute;
-    width:40px;
-    height:40px;
-    z-index:300000;
-    top:10px;
-    left:40%;
-    text-align:center;
-}
-
-/* Add animation to "page content" */
-.animate-bottom {
-  position: relative;
-  -webkit-animation-name: animatebottom;
-  -webkit-animation-duration: 1s;
-  animation-name: animatebottom;
-  animation-duration: 1s
-}
-
-@-webkit-keyframes animatebottom {
-  from { bottom:-100px; opacity:0 } 
-  to { bottom:0px; opacity:1 }
-}
-
-@keyframes animatebottom { 
-  from{ bottom:-100px; opacity:0 } 
-  to{ bottom:0; opacity:1 }
-}
-
-#myDiv {
-  display: none;
-  text-align: center;
-}
-</style>
+<link rel="stylesheet" type="text/css" href="loader.css">
 </head>
-<body onload="myFunction()" style="margin:0;">
 
+<body onload="myFunction()">
+<!-- Loader with progress line and Loading video -->
 <div id="loader">
-	<div id="wrap_video">
-    <div id="video_box">
-        <div id="video_overlays"><img width="200px" height="200px" src="images/load.gif"></div>
-        <div>
-			<video style="width:auto;height: 100%" id="v0" tabindex="0" autoplay>
-		      <!-- <source type="video/webm; codecs=&quot;vp8, vorbis&quot;" src="images/bb.webm"></source> -->
-		      <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="images/VdeV-Recovered.mp4"></source>       
+  <div class="progress-line"></div>
+  	<div id="wrap_video">
+      <div id="video_box">
+  			<video id="v0" tabindex="0" autoplay>
+		      <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="images/PARTICLE LOGO.mp4"></source>       
 		      <p>Sorry, your browser does not support the &lt;video&gt; element.</p>
-			</video>
-        </div>
+  			</video>
+      </div>
+  	</div>
+  </div>
+</div>
+<div id="myDiv">
+  <div>
+    <div class="thumb">
+      <a href="#myAnchor">
+        <div id="left"></div>
+        <div id="right"></div>
+        <span>HELLO</span>
+      </a>
     </div>
-	</div>
-
+  </div>
 </div>
-
-<div style="display:none;" id="myDiv" class="animate-bottom">
-  <h2>Tada!</h2>
-  <p>Some text in my newly loaded page..</p>
-</div>
-
 <script>
 var myVar;
-
 function myFunction() {
     myVar = setTimeout(showPage, 5000);
 }
