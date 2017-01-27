@@ -1,8 +1,15 @@
-body{
-  margin: 0px;
-  background-image: url('images/back2.jpg');
+*{
+  margin:0px;
+  padding: 0px;
+  border: 0px;
+}
+#mylogo{
+  background-image: url('images/MyLogo3.png');
   background-repeat: no-repeat;
-  background-size:cover;
+  width: 420px;
+  height: 420px;
+  position: absolute;
+  display: block;
 }
 #contain{
   position: relative;
@@ -24,9 +31,13 @@ body{
 #loader {
   position: absolute;
   display: block;
+  background-color: white;
+  width: 1366px;
+  height: 650px;
 }
 #video_box {
   position:relative;
+  size: cover;
 }
 #myDiv {
   display: none;
@@ -66,12 +77,16 @@ video {
 
 
 
-
+#name{
+  margin-top: 100px;
+  margin-left: 500px;
+  position: absolute;
+}
 
 .thumb {
   width: 1024px;
   height: 500px;
-  margin-left: 183px;
+  margin-left: 400px;
   margin-top: 100px;
   perspective: 1000px;
   position: relative;
