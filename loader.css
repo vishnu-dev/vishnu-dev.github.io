@@ -84,10 +84,10 @@ video {
 }
 
 .thumb {
-  width: 1024px;
-  height: 500px;
+  width: 800px;
+  height: 420px;
+  top:100px;
   margin-left: 400px;
-  margin-top: 100px;
   perspective: 1000px;
   position: relative;
 }
@@ -95,8 +95,8 @@ video {
   display: block;
   position:absolute;
   float:left;
-  width: 1024px;
-  height: 500px;
+  width: 800px;
+  height: 420px;
   /*double layered BG for lighting effect*/
   background: 
     linear-gradient(rgba(0, 0, 0 ,0.4), rgba(0, 0, 0, 0.4)), 
