@@ -40,6 +40,7 @@ Main Components
   transform: translateZ(0);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  position: absolute;
 }
 .cd-header::after {
   clear: both;
@@ -87,7 +88,7 @@ Main Components
   position: absolute;
   width: 28px;
   height: 3px;
-  background-color: #fff;
+  background-color: #000;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
@@ -119,7 +120,7 @@ Main Components
 }
 .nav-is-visible .cd-3d-nav-trigger span::before, .nav-is-visible .cd-3d-nav-trigger span::after {
   /* keep visible other 2 lines */
-  background-color: white;
+  background-color: black;
 }
 .nav-is-visible .cd-3d-nav-trigger span::before {
   -webkit-transform: translateY(8px) rotate(-45deg);
@@ -179,7 +180,7 @@ Main Components
   /* this is the 3D rotating navigation */
   position: relative;
   height: 100%;
-  background-color: #343c55;
+  background-color: #DCDCDC;
   /* Force Hardware Acceleration */
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
@@ -241,7 +242,7 @@ Main Components
   position: relative;
   display: block;
   height: 100%;
-  color: transparent;
+  color: #fff;
   -webkit-transition: background-color 0.2s;
   -moz-transition: background-color 0.2s;
   transition: background-color 0.2s;
@@ -266,13 +267,13 @@ Main Components
   background-position: 0 0;
 }
 .no-touch .cd-3d-nav a:hover {
-  background-color: #2b3145;
+  background-color:#1E90FF;
 }
 .cd-3d-nav .cd-selected a {
-  background-color: #212635;
+  background-color: #BDBDBD;
 }
 .no-touch .cd-3d-nav .cd-selected a:hover {
-  background-color: #212635;
+  background-color: #B3E5FC;
 }
 .cd-3d-nav .cd-selected a::before {
   background-position: 0 -32px;
@@ -390,7 +391,7 @@ Main Components
   background-color: #77cd91;
 }
 
-/*main {
+main {
   -webkit-transition: -webkit-transform 0.5s;
   -moz-transition: -moz-transform 0.5s;
   transition: transform 0.5s;
@@ -431,4 +432,3 @@ main.nav-is-visible {
     margin: 4em auto;
   }
 }
-*/
