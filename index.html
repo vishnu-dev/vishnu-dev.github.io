@@ -1,7 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="no-js">
 <head>
+<<<<<<< HEAD
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/loader.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/modernizr.js"></script>
+=======
 <link rel="stylesheet" type="text/css" href="loader.css">
+>>>>>>> 31d20beed38971e9d7731cc70d5306b54bd7bc90
 </head>
 
 <body onload="myFunction()">
@@ -10,7 +21,7 @@
   <div class="progress-line"></div>
   	<div id="wrap_video">
       <div id="video_box">
-  			<video width="1280px" height="630" id="v0" tabindex="0" autoplay>
+  			<video width="1366px" height="630" id="v0" tabindex="0" autoplay>
 		      <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="images/PARTICLE LOGO.mp4"></source>       
 		      <p>Sorry, your browser does not support the &lt;video&gt; element.</p>
   			</video>
@@ -20,17 +31,58 @@
 </div>
 
 <div id="myDiv">
-  <div id="mylogo"></div>
-  <div id="name">
-    <img src="images/name.gif">
-  </div>
-  <div class="thumb">
-    <a href="#myAnchor">
-      <div id="left"></div>
-      <div id="right"></div>
-      <span>HELLO</span>
-    </a>
-  </div>
+	<header class="cd-header">
+		<a href="#0" class="cd-logo"><img src="images/cd-logo.svg" alt="Logo"></a>
+		<a href="#0" class="cd-3d-nav-trigger">
+			Menu
+			<span></span>
+		</a>
+	</header> <!-- .cd-header -->
+	
+	<div>
+		<div id="mylogo"><img src="images/MyLogo3.png"></div>
+		<div class="thumb">
+		<a href="#myAnchor">
+		  <span>HELLO</span>
+		</a>
+		</div>
+	</div>
+	
+	<nav class="cd-3d-nav-container">
+		<ul class="cd-3d-nav">
+			<li class="cd-selected">
+				<a href="#0">Dashboard</a>
+			</li>
+
+			<li>
+				<a href="#0">Projects</a>
+			</li>
+
+			<li>
+				<a href="#0">Images</a>
+			</li>
+
+			<li>
+				<a href="#0">Settings</a>
+			</li>
+
+			<li>
+				<a href="#0">New</a>
+			</li>
+		</ul> <!-- .cd-3d-nav -->
+
+		<span class="cd-marker color-1"></span>	
+	</nav> <!-- .cd-3d-nav-container -->
+
+
+
+
+
+
+
+
+
+
 </div>
 <script>
 var myVar;
@@ -43,6 +95,7 @@ function showPage() {
   document.getElementById("myDiv").style.display = "block";
 }
 </script>
-
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
