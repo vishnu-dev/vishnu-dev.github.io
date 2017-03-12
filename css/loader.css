@@ -1,6 +1,7 @@
 body{
   margin:0px;
   line-height: 1;
+  background-color: #2196F3;
 }
 #mylogo{
   width: 420px;
@@ -93,7 +94,7 @@ video {
   /*double layered BG for lighting effect*/
   background: 
     linear-gradient(rgba(0, 0, 0 ,0.4), rgba(0, 0, 0, 0.4)), 
-    url("../images/fpage.jpg");
+    url("../images/fpage1.png");
   /*disabling the translucent black bg on the main image*/
   background-size: 0,cover;
   /*3d space for children*/
@@ -107,11 +108,12 @@ video {
   content: ''; position: absolute; left: 0; bottom: 0; 
   width: 100%; height: 36px;
   /*inherit the main BG*/
-  background: inherit; background-size: cover, cover;
+  background:inherit; background-size: cover, cover;
   /*draw the BG bottom up*/
   background-position: bottom;
   /*rotate the surface 90deg on the bottom axis*/
   transform: rotateX(90deg); transform-origin: bottom;
+
 }
 /*label style*/
 .thumb a span {
@@ -140,4 +142,30 @@ video {
   box-shadow: 0 0 25px 25px rgba(0, 0, 0, 0.5);
   /*pushing the shadow down and scaling it down to size*/
   transform: rotateX(0) translateZ(-60px) scale(0.85);
+}
+
+
+
+
+
+/* Hide scrollbar from page */
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+
+@font-face{
+    font-family: "gothic";
+    src: url('../fonts/leaguegothic.ttf'),
+    url('../fonts/leaguegothic.eot'); /* IE */
+}
+
+
+#bannner{
+
+}
+#banner p{
+  font-family: gothic;
+  text-align: center;
+  font-size: 300px;
 }

@@ -29,6 +29,7 @@ Main Components
   height: 80px;
   width: 90%;
   margin: 0 auto;
+  z-index: 100;
   -webkit-transition: -webkit-transform 0.5s;
   -moz-transition: -moz-transform 0.5s;
   transition: transform 0.5s;
@@ -40,7 +41,7 @@ Main Components
   transform: translateZ(0);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  position: absolute;
+  position: fixed;
 }
 .cd-header::after {
   clear: both;
@@ -144,6 +145,7 @@ Main Components
   left: 0;
   height: 80px;
   width: 100%;
+  z-index: 100;
   background-color: #000000;
   visibility: hidden;
   /* enable a 3D-space for children elements */
@@ -180,7 +182,7 @@ Main Components
   /* this is the 3D rotating navigation */
   position: relative;
   height: 100%;
-  background-color: #DCDCDC;
+  background-color: #444444;
   /* Force Hardware Acceleration */
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
@@ -242,7 +244,6 @@ Main Components
   position: relative;
   display: block;
   height: 100%;
-  color: #fff;
   -webkit-transition: background-color 0.2s;
   -moz-transition: background-color 0.2s;
   transition: background-color 0.2s;
@@ -267,13 +268,14 @@ Main Components
   background-position: 0 0;
 }
 .no-touch .cd-3d-nav a:hover {
-  background-color:#1E90FF;
+  background-color:#6d6d6d;
 }
 .cd-3d-nav .cd-selected a {
-  background-color: #BDBDBD;
+  background-color: #FFA726;
+  color: #000;
 }
 .no-touch .cd-3d-nav .cd-selected a:hover {
-  background-color: #B3E5FC;
+  background-color: #FFB74D;
 }
 .cd-3d-nav .cd-selected a::before {
   background-position: 0 -32px;
@@ -296,7 +298,7 @@ Main Components
 @media only screen and (min-width: 768px) {
   .cd-3d-nav a {
     padding: 7.6em 1em 0;
-    color: #000000;
+    color: #fff;
     font-size: 1.3rem;
     font-weight: 600;
     text-align: center;
@@ -367,28 +369,28 @@ Main Components
 
 /* these are the colors of the markers - line + arrow */
 .color-1 {
-  color: #9a57bd;
-  background-color: #9a57bd;
+  color: #fff;
+  background-color: #fff;
 }
 
 .color-2 {
-  color: #c96aa4;
-  background-color: #c96aa4;
+  color: #fff;
+  background-color: #fff;
 }
 
 .color-3 {
-  color: #d6915e;
-  background-color: #d6915e;
+  color: #fff;
+  background-color: #fff;
 }
 
 .color-4 {
-  color: #5397c7;
-  background-color: #5397c7;
+  color: #fff;
+  background-color: #fff;
 }
 
 .color-5 {
-  color: #77cd91;
-  background-color: #77cd91;
+  color: #fff;
+  background-color: #fff;
 }
 
 main {
@@ -402,15 +404,6 @@ main {
   transform: translateZ(0);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-}
-main h1 {
-  text-align: center;
-  font-size: 2.4rem;
-  font-weight: 300;
-  color: #ffffff;
-  margin: 2em auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 main.nav-is-visible {
   -webkit-transform: translateY(80px);
@@ -426,9 +419,5 @@ main.nav-is-visible {
     -ms-transform: translateY(170px);
     -o-transform: translateY(170px);
     transform: translateY(170px);
-  }
-  main h1 {
-    font-size: 3.6rem;
-    margin: 4em auto;
   }
 }

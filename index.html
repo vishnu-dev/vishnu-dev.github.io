@@ -4,12 +4,12 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/loader.css">
 	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/navbar.css">
+<!-- 	<link rel="stylesheet" href="css/bootstrap.min.css"> -->
+	<link rel="prefetch" href="images/fpage.png">
 	<script src="js/modernizr.js"></script>
-<link rel="stylesheet" type="text/css" href="loader.css">
 </head>
 
 <body onload="myFunction()">
@@ -34,16 +34,6 @@
 			<span></span>
 		</a>
 	</header> <!-- .cd-header -->
-	
-	<main>
-		<div id="mylogo"><img src="images/MyLogo3.png"></div>
-		<div class="thumb">
-		<a href="#myAnchor">
-		  <span>HELLO</span>
-		</a>
-		</div>
-	</main>
-	
 	<nav class="cd-3d-nav-container">
 		<ul class="cd-3d-nav">
 			<li class="cd-selected">
@@ -51,7 +41,7 @@
 			</li>
 
 			<li>
-				<a href="#0">Projects</a>
+				<a onclick="window.location.hash = '#go';">Projects</a>
 			</li>
 
 			<li>
@@ -69,17 +59,43 @@
 
 		<span class="cd-marker color-1"></span>	
 	</nav> <!-- .cd-3d-nav-container -->
+	<main>
+		<!-- <div id="mylogo"><img src="images/MyLogo3.png"></div> -->
+		<div class="container">
+			<div id="banner">
+				<p>I'M VISHNU</p>
+			</div>
+		</div>
+<!-- 	div class="thumb">
+			<a href="#myAnchor">
+			  <span>HELLO</span>
+			</a>
+		</div> -->
+
+	</main>
+	
+	
 </div>
 <script>
 var myVar;
 function myFunction() {
-    myVar = setTimeout(showPage, 5000);
+    myVar = setTimeout(showPage, 1000);
 }
 
 function showPage() {
   document.getElementById("loader").style.display = "none";
   document.getElementById("myDiv").style.display = "block";
 }
+
+function preload(arrayOfImages) {
+    $(arrayOfImages).each(function(){
+        $('<img/>')[0].src = this;
+    });
+}
+
+preload([
+    'images/fpage.png'
+]);
 </script>
 <script src="js/jquery-2.1.1.js"></script>
 <script src="js/main.js"></script>
