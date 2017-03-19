@@ -72,9 +72,6 @@ video {
 
 
 #name{
-  margin-top: 100px;
-  margin-left: 500px;
-  position: absolute;
 }
 
 .thumb {
@@ -169,8 +166,8 @@ video {
   text-align: center;
   font-size: 100px;
 }
-.iam{
-  padding-right: 100px;
+#iam{
+  padding-right: 10px;
 }
 
 
@@ -197,4 +194,24 @@ video {
     0% { opacity:1; }
     50% { opacity:0; }
     100% { opacity:1; }
+}
+
+
+
+
+
+
+.parallax {
+    /* The image used */
+    background-image: url("../images/back.jpg");
+
+
+    /* Set a specific height */
+    height: 630px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
