@@ -10,6 +10,16 @@
 <!-- 	<link rel="stylesheet" href="css/bootstrap.min.css"> -->
 	<link rel="prefetch" href="images/fpage.png">
 	<script src="js/modernizr.js"></script>
+	<script src="js/typed.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function(){
+      Typed.new('.element', {
+        strings: ["developer", "designer", "Vishnu"],
+        typeSpeed: 50,
+				backDelay: 1000
+      });
+  });
+</script>
 </head>
 
 <body onload="myFunction()">
@@ -20,7 +30,7 @@
 	  	<div id="wrap_video">
 	      <div id="video_box">
 	  			<video width="1366px" height="630" id="v0" tabindex="0" autoplay>
-			      <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="images/PARTICLE LOGO.mp4"></source>       
+			      <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="images/PARTICLE LOGO.mp4"></source>
 			      <p>Sorry, your browser does not support the &lt;video&gt; element.</p>
 	  			</video>
 	      </div>
@@ -59,13 +69,15 @@
 			</li>
 		</ul> <!-- .cd-3d-nav -->
 
-		<span class="cd-marker color-1"></span>	
+		<span class="cd-marker color-1"></span>
 	</nav> <!-- .cd-3d-nav-container -->
 	<main>
 		<!-- <div id="mylogo"><img src="images/MyLogo3.png"></div> -->
-		<div class="container">
+		<div id="name">
 			<div id="banner">
-				<p>I'M VISHNU</p>
+				<span id="iam">I'am</span>
+				<span class="element"></span>
+				<span class="typed-cursor"></span>
 			</div>
 		</div>
 		<!-- div class="thumb">
@@ -75,13 +87,13 @@
 		</div> -->
 
 	</main>
-	
-	
+
+
 </div>
 <script>
 var myVar;
 function myFunction() {
-    myVar = setTimeout(showPage, 5000);
+    myVar = setTimeout(showPage, 0);
 }
 
 function showPage() {
