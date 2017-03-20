@@ -152,9 +152,8 @@ video {
 
 
 @font-face{
-    font-family: "gothic";
-    src: url('../fonts/leaguegothic.ttf'),
-    url('../fonts/leaguegothic.eot'); /* IE */
+    font-family: "lacuna";
+    src: url('../fonts/lacuna-webfont.woff')
 }
 
 
@@ -162,9 +161,11 @@ video {
 
 }
 #banner span{
-  font-family: gothic;
+  font-family: lacuna;
   text-align: center;
   font-size: 100px;
+  color: #fff;
+  text-shadow: 2px 2px #000;
 }
 #iam{
   padding-right: 10px;
