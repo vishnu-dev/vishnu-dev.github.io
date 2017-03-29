@@ -68,12 +68,6 @@ video {
   100% { margin-left: 100%; margin-right: 0; }
 }
 
-
-
-
-#name{
-}
-
 .thumb {
   width: 800px;
   height: 420px;
@@ -161,12 +155,20 @@ video {
 text-align: center;
 left: 50%;
 }
-#banner span{
-  font-family: 'tapes';
+
+#name{
   text-align: center;
+  position: fixed;
+  top:10%;
+  left: 40%;
+  z-index: 2;
+}
+
+#name span{
+  font-family: 'tapes';
   font-size: 100px;
-  color: #fff;
-  text-shadow: 2px 2px #000;
+  color: #000;
+  /*text-shadow: 2px 2px #000;*/
 }
 #iam{
   padding-right: 10px;
