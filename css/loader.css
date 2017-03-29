@@ -158,10 +158,9 @@ left: 50%;
 
 #name{
   text-align: center;
-  position: fixed;
+  position: absolute;
   top:10%;
   left: 40%;
-  z-index: 2;
 }
 
 #name span{
@@ -214,8 +213,21 @@ left: 50%;
     height: 650px;
 
     /* Create the parallax scrolling effect */
-    /*background-attachment: fixed;
+    background-attachment: fixed;
     background-position: center;
-    background-repeat: no-repeat;*/
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallax2 {
+    /* The image used */
+
+
+    /* Set a specific height */
+    top:650px;
+    height: 650px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
 }
