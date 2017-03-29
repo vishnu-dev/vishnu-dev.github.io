@@ -11,18 +11,7 @@
 	<link rel="prefetch" href="images/back.jpg">
 	<script src="js/modernizr.js"></script>
 	<script src="js/typed.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', function(){
-      Typed.new('.element', {
-        strings: ["a developer.", "a designer.", "Vishnu"],
-        typeSpeed: 50,
-				backDelay: 1000
-      });
-  });
-	function func() {
-		alert('hey!');
-	}
-</script>
+
 </head>
 
 <body onload="myFunction()">
@@ -74,10 +63,10 @@
 
 		<span class="cd-marker color-1"></span>
 	</nav> <!-- .cd-3d-nav-container -->
-	<div class="parallax">
+	<div class="parallax"  id="banner">
 		<!-- <div id="mylogo"><img src="images/MyLogo3.png"></div> -->
 		<div id="name">
-			<div id="banner">
+			<div>
 				<span id="iam">I'm</span>
 				<span class="element"></span>
 				<span class="typed-cursor"></span>
@@ -99,7 +88,7 @@
 <script>
 var myVar;
 function myFunction() {
-    myVar = setTimeout(showPage, 5000);
+    myVar = setTimeout(showPage, 0);
 }
 
 function showPage() {
@@ -116,6 +105,17 @@ function preload(arrayOfImages) {
 preload([
     'images/fpage.png'
 ]);
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function(){
+      Typed.new('.element', {
+        strings: ["a developer", "a designer", "Vishnu"],
+        typeSpeed: 50,
+				backDelay: 1000,
+				loop:true
+      });
+  });
+
 </script>
 <script src="js/jquery-2.1.1.js"></script>
 <script src="js/main.js"></script>

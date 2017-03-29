@@ -152,16 +152,17 @@ video {
 
 
 @font-face{
-    font-family: "lacuna";
-    src: url('../fonts/lacuna-webfont.woff')
+    font-family: "tapes";
+    src: url("../fonts/tapes.ttf");
 }
 
 
 #bannner{
-
+text-align: center;
+left: 50%;
 }
 #banner span{
-  font-family: lacuna;
+  font-family: 'tapes';
   text-align: center;
   font-size: 100px;
   color: #fff;
@@ -204,15 +205,15 @@ video {
 
 .parallax {
     /* The image used */
-    background-image: url("../images/back.jpg");
+    background-image: url("../images/back2.jpg");
 
 
     /* Set a specific height */
-    height: 630px;
+    height: 650px;
 
     /* Create the parallax scrolling effect */
-    background-attachment: fixed;
+    /*background-attachment: fixed;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;*/
     background-size: cover;
 }
