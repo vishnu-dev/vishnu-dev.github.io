@@ -1,9 +1,17 @@
 const express = require('express');  
+var exphbs  = require('express-handlebars');
 const app = express();  
-const port = 6000;
+const port = 8080;
+
+//Handlebars init
+app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+app.set('view engine', 'handlebars');
+
+// Set Static Folder
+app.use(express.static(__dirname + '/public'));
 
 app.get('/', (request, response) => {  
-  response.render("index.html");
+  response.render("home");
 });
 
 app.listen(port, (err) => {  
