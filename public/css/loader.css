@@ -3,6 +3,9 @@ body{
   line-height: 1;
   background-color: #2196F3;
 }
+#myDiv{
+  display: none;
+}
 #mylogo{
   width: 420px;
   height: 420px;
@@ -12,14 +15,12 @@ body{
 #left{
   position:absolute;
   float:left;
-  width: 512px;
-  height: 500px;
+  width: 50%;
 }
 #right{
   position: absolute;
-  margin-left:510px;
-  width: 512px;
-  height: 500px;
+  margin-left:50%;
+  width: 50%;
 }
 /*loader */
 #loader {
@@ -126,35 +127,149 @@ left: 50%;
     100% { opacity:1; }
 }
 
-
-
-
-
-
-.parallax {
-    /* The image used */
-    background-image: url("../images/back2.jpg");
-
-
-    /* Set a specific height */
-    height: 650px;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+/* background setup */
+.background {
+    background-repeat:no-repeat;
+    /* custom background-position */
+    background-position:50% 50%;
+    /* ie8- graceful degradation */
+    background-position:50% 50%\9 !important;
 }
-.parallax2 {
-    /* The image used */
 
+/* fullscreen setup */
+html, body {
+    /* give this to all tags from html to .fullscreen */
+    height:100%;
+}
+.fullscreen,
+.content-a {
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+.fullscreen.overflow,
+.fullscreen.overflow .content-a {
+    height:auto;
+    min-height:100%;
+}
 
-    /* Set a specific height */
-    top:650px;
-    height: 650px;
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+/* content centering styles */
+.content-a {
+    display:table;
+}
+.content-b {
+  display:table-cell;
+    position:relative;
+  vertical-align:middle;
+  text-align:center;
+}
+
+.not-fullscreen {
+    height:50%;
+}
+.font-bold {
+  padding: 10px;
+  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
+}
+.font-medium {
+  padding: 50px;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+}
+/* responsive text queries */
+@media screen and (max-width: 1366px) {
+  p,.btn,input,div,span,h4 {
+    font-size: 95%;
+  }
+  .heading-big{
+    font-size: 100px;
+  }
+  .text-medium{
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  p,.btn,input,div,span,h4 {
+    font-size: 90%;
+  }
+  .heading-big{
+    font-size: 50px;
+  }
+  .text-medium{
+    font-size: 18px;
+  }
+}
+
+.social-container {
+  width: 400px;
+  margin: 0vh auto;
+  text-align: center;
+}
+
+.social-icons {
+  padding: 0;
+  list-style: none;
+  margin: 1em;
+}
+.social-icons li {
+  display: inline-block;
+  margin: 0.15em;
+  position: relative;
+  font-size: 1.2em;
+}
+.social-icons i {
+  color: #fff;
+  position: absolute;
+  top: 21px;
+  left: 21px;
+  transition: all 265ms ease-out;
+}
+.social-icons a {
+  display: inline-block;
+}
+.social-icons a:before {
+  transform: scale(1);
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  content: " ";
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  display: block;
+  background: linear-gradient(45deg, #ff003c, #c648c8);
+  transition: all 265ms ease-out;
+}
+.social-icons a:hover:before {
+  transform: scale(0);
+  transition: all 265ms ease-in;
+}
+.social-icons a:hover i {
+  transform: scale(2.2);
+  -ms-transform: scale(2.2);
+  -webkit-transform: scale(2.2);
+  color: #ff003c;
+  background: -webkit-linear-gradient(45deg, #ff003c, #c648c8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 265ms ease-in;
+}
+.social-icons a.social-square:before {
+  background: linear-gradient(45deg, #7b00e0, #ae31d9);
+  border-radius: 10%;
+}
+.social-icons a.social-square:hover:before {
+  transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -webkit-transform: scale(-180deg);
+  border-radius: 100%;
+}
+.social-icons a.social-square:hover i {
+  transform: scale(1.6);
+  -ms-transform: scale(1.6);
+  -webkit-transform: scale(1.6);
+  color: #fff;
+  transform: scale(1.6);
+  -webkit-text-fill-color: #fff;
 }

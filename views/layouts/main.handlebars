@@ -3,38 +3,48 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
+	<script>
+	$(document).ready(function() {
+	$(".preloader").delay(5000).fadeOut("slow");
+	$('body').delay(350).css({'overflow':'visible'});
+	});
+	</script>
+	<link rel="stylesheet" href="css/bootstrap.min.css">	
 	<link rel="stylesheet" href="css/loader.css">
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/navbar.css">
+{{!-- 	<link rel="stylesheet" href="css/reset.css">
+ --}}	<link rel="stylesheet" href="css/navbar.css">
 	<link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-<!-- 	<link rel="stylesheet" href="css/bootstrap.min.css"> -->
-	<link rel="prefetch" href="images/back.jpg">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:500,800" rel="stylesheet">
+	<link rel="prefetch" href="images/back2.jpg">
 	<script src="js/modernizr.js"></script>
 	<script src="js/typed.js"></script>
+	<script src="js/jquery-2.1.1.js"></script>
 
 </head>
 
-<body onload="myFunction()">
+<body>
 <!-- Loader with progress line and Loading video -->
-<div>
-	<div id="loader">
-	  <div class="progress-line"></div>
-	  	<div id="wrap_video">
-	      <div id="video_box">
-	  			<video id="v0" tabindex="0" autoplay>
-			      <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="images/PARTICLE LOGO.mp4"></source>
-			      <p>Sorry, your browser does not support the &lt;video&gt; element.</p>
-	  			</video>
-	      </div>
-	  	</div>
-	  </div>
-	</div>
+
+<div class="preloader" id="loader">
+  <div class="progress-line"></div>
+  	<div id="wrap_video">
+      <div id="video_box" style="width:100%;height:100%;z-index:999">
+  			<video id="v0" tabindex="0" autoplay>
+		      <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="images/PARTICLE LOGO.mp4"></source>
+		      <p>Sorry, your browser does not support the &lt;video&gt; element.</p>
+  			</video>
+      </div>
+  	</div>
+  </div>
 </div>
 
-<div id="myDiv" onload="func()">
-
-	<div class="parallax"  id="banner">
+<div class="fullscreen background parallax" style="background-image:url('images/back2.jpg')" data-img-width="1920" data-img-height="1080" data-diff="100">
+	<div class="content-a">
+		<div id="name">
+			<span id="iam">I'm </span>
+			<span class="element"></span>
+			<span class="typed-cursor"></span>
+		</div>
 		<div>
 			<nav class="menu">
 			  <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open" />
@@ -71,14 +81,25 @@
 			    </defs>
 			</svg>
 		</div>
-		<div id="name">
-			<span id="iam">I'm </span>
-			<span class="element"></span>
-			<span class="typed-cursor"></span>
-		</div>
 	</div>
-		<div class="parallax2"  id="banner2">
-			<div id="mylogo"><img src="images/MyLogo3.png"></div>
+</div>
+		
+
+	</div>
+		<div class="fullscreen background parallax" id="banner2">
+			<div id="left"><img class="img-fluid" src="images/me-in-bw-gold-td.jpg"></div>
+			<div id="right">
+				<p class="heading-big font-bold text-center">about me</p>
+				<h3 class="text-medium font-medium text-center">I'am a student pursuing my engineering in Computer Science at MVIT. I am a passionate coder and designer.</h3>
+				<div class="social-container">
+				    <ul class="social-icons">
+				        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+				        <li><a href="#"><i class="fa fa-github"></i></a></li>
+				    	<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+				        <li><a href="#"><i class="fa fa-stack-overflow"></i></a></li>
+				    </ul>
+				</div>
+			</div>
 		</div>
 
 	</div>
@@ -86,28 +107,117 @@
 
 </div>
 <script>
-var myVar;
-function myFunction() {
-    myVar = setTimeout(showPage, 10);
-}
-
-function showPage() {
-  document.getElementById("loader").style.display = "none";
-  document.getElementById("myDiv").style.display = "block";
-}
-</script>
-<script>
   document.addEventListener('DOMContentLoaded', function(){
       Typed.new('.element', {
         strings: ["a developer", "a designer", "Vishnu"],
-        typeSpeed: 50,
+        typeSpeed: 80,
 				backDelay: 1000,
 				loop:true
       });
   });
 
 </script>
-<script src="js/jquery-2.1.1.js"></script>
-<script src="js/main.js"></script>
+<script type="text/javascript">
+/* detect touch */
+if("ontouchstart" in window){
+    document.documentElement.className = document.documentElement.className + " touch";
+}
+if(!$("html").hasClass("touch")){
+    /* background fix */
+    $(".parallax").css("background-attachment", "fixed");
+}
+
+/* fix vertical when not overflow
+call fullscreenFix() if .fullscreen content changes */
+function fullscreenFix(){
+    var h = $('body').height();
+    // set .fullscreen height
+    $(".content-b").each(function(i){
+        if($(this).innerHeight() > h){ $(this).closest(".fullscreen").addClass("overflow");
+        }
+    });
+}
+$(window).resize(fullscreenFix);
+fullscreenFix();
+
+/* resize background images */
+function backgroundResize(){
+    var windowH = $(window).height();
+    $(".background").each(function(i){
+        var path = $(this);
+        // variables
+        var contW = path.width();
+        var contH = path.height();
+        var imgW = path.attr("data-img-width");
+        var imgH = path.attr("data-img-height");
+        var ratio = imgW / imgH;
+        // overflowing difference
+        var diff = parseFloat(path.attr("data-diff"));
+        diff = diff ? diff : 0;
+        // remaining height to have fullscreen image only on parallax
+        var remainingH = 0;
+        if(path.hasClass("parallax") && !$("html").hasClass("touch")){
+            var maxH = contH > windowH ? contH : windowH;
+            remainingH = windowH - contH;
+        }
+        // set img values depending on cont
+        imgH = contH + remainingH + diff;
+        imgW = imgH * ratio;
+        // fix when too large
+        if(contW > imgW){
+            imgW = contW;
+            imgH = imgW / ratio;
+        }
+        //
+        path.data("resized-imgW", imgW);
+        path.data("resized-imgH", imgH);
+        path.css("background-size", imgW + "px " + imgH + "px");
+    });
+}
+$(window).resize(backgroundResize);
+$(window).focus(backgroundResize);
+backgroundResize();
+
+/* set parallax background-position */
+function parallaxPosition(e){
+    var heightWindow = $(window).height();
+    var topWindow = $(window).scrollTop();
+    var bottomWindow = topWindow + heightWindow;
+    var currentWindow = (topWindow + bottomWindow) / 2;
+    $(".parallax").each(function(i){
+        var path = $(this);
+        var height = path.height();
+        var top = path.offset().top;
+        var bottom = top + height;
+        // only when in range
+        if(bottomWindow > top && topWindow < bottom){
+            var imgW = path.data("resized-imgW");
+            var imgH = path.data("resized-imgH");
+            // min when image touch top of window
+            var min = 0;
+            // max when image touch bottom of window
+            var max = - imgH + heightWindow;
+            // overflow changes parallax
+            var overflowH = height < heightWindow ? imgH - height : imgH - heightWindow; // fix height on overflow
+            top = top - overflowH;
+            bottom = bottom + overflowH;
+            // value with linear interpolation
+            var value = min + (max - min) * (currentWindow - top) / (bottom - top);
+            // set background-position
+            var orizontalPosition = path.attr("data-oriz-pos");
+            orizontalPosition = orizontalPosition ? orizontalPosition : "50%";
+            $(this).css("background-position", orizontalPosition + " " + value + "px");
+        }
+    });
+}
+if(!$("html").hasClass("touch")){
+    $(window).resize(parallaxPosition);
+    //$(window).focus(parallaxPosition);
+    $(window).scroll(parallaxPosition);
+    parallaxPosition();
+}
+
+
+</script>
 </body>
 </html>
