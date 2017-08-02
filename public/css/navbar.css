@@ -77,7 +77,6 @@ body {
 
 .menu {
   position: fixed;
-  z-index: 100;
   left: 5%;
   margin-left: -80px;
   padding-top: 20px;
