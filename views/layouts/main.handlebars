@@ -3,16 +3,17 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="google-site-verification" content="ryRbZSWbLQRW3h1Eto6YqOP8sDyjSnDa4UY2v29wGSo" />
 	<link rel="stylesheet" href="css/bootstrap.min.css">	
 	<link rel="stylesheet" href="css/loader.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/navbar.css">
 	<link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:500,800" rel="stylesheet">
-	<script src="js/modernizr.js"></script>
-	<script src="js/typed.js"></script>
 	<script src="js/jquery-2.1.1.js"></script>
-
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/typed.js"></script>
+	<script src="js/main.js"></script>
 </head>
 
 <body>
@@ -42,7 +43,7 @@
 
 <div class="fullscreen background parallax" style="background-image:url('images/back2.jpg');" data-img-width="1366" data-img-height="665" data-diff="100">
 	<div class="content-a">
-		<div id="name" class="font-bold heading-big" style="padding:5px;font-size:50px;color:black">
+		<div id="name" class="font-bold heading-big">
 			<span id="iam">I'm </span>
 			<span class="element"></span>
 			<span class="typed-cursor"></span>
@@ -56,10 +57,10 @@
 			    <span class="hamburger hamburger-3"></span>
 			  </label>
 
-			  <a href="#" class="menu-item"> <i class="fa fa-bar-chart"></i> </a>
-			  <a href="#" class="menu-item"> <i class="fa fa-plus"></i> </a>
-			  <a href="#" class="menu-item"> <i class="fa fa-heart"></i> </a>
-			  <a href="#" class="menu-item"> <i class="fa fa-envelope"></i> </a>
+			  <a data-spy="scroll" href="#banner2" class="menu-item"> <i class="fa fa-user-circle"></i> </a>
+			  <a data-spy="scroll" href="#" class="menu-item"> <i class="fa fa-plus"></i> </a>
+			  <a data-spy="scroll" href="#" class="menu-item"> <i class="fa fa-heart"></i> </a>
+			  <a data-spy="scroll" href="#" class="menu-item"> <i class="fa fa-envelope"></i> </a>
 
 			</nav>
 			<!-- filters -->
@@ -83,39 +84,39 @@
 			    </defs>
 			</svg>
 		</div>
-		<div id="arrow" class="text-center"><i class="fa fa-3x fa-angle-double-down"></i></div>
+		<a href="#banner2"><div id="arrow" class="text-center"><i id="arrow-icon" class="fa fa-bold fa-3x fa-angle-double-down"></i></div></a>
 	</div>
 	
 </div>
-		
 
-	</div>
-		<div class="fullscreen background parallax" id="banner2">
-			<div id="left"><img class="img-fluid" src="images/me-in-bw-gold-td.jpg"></div>
-			<div id="right">
-				<p class="heading-big font-bold text-center">about me</p>
-				<h3 class="text-medium font-medium text-center">I'am a student pursuing my engineering in Computer Science at MVIT. I am a passionate coder and designer.</h3>
-				<div class="social-container">
-				    <ul class="social-icons">
-				        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-				        <li><a href="#"><i class="fa fa-github"></i></a></li>
-				    	<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-				        <li><a href="#"><i class="fa fa-stack-overflow"></i></a></li>
-				    </ul>
-				</div>
-			</div>
+<div class="fullscreen background parallax" id="banner2" data-img-width="683" data-img-height="665" data-diff="100">
+	<div id="left"><img src="images/me-in-bw-gold-td.jpg"></div>
+	<div id="right" style="padding-top:10%">
+		<p class="heading-big font-bold text-center">about me</p>
+		<h3 class="text-medium font-medium text-center">I'am a student pursuing my engineering in Computer Science at MVIT. I am a passionate coder and designer.</h3>
+		<div class="social-container">
+		    <ul class="social-icons">
+		        <li><a target="_blank" href="https://www.linkedin.com/in/vishnu-dev"><i class="fa fa-linkedin"></i></a></li>
+		        <li><a href="https://github.com/vishnu-dev"><i class="fa fa-github"></i></a></li>
+		    	<li><a href="https://www.facebook.com/profile.php?id=100001034769882"><i class="fa fa-facebook"></i></a></li>
+		        <li><a href="https://stackoverflow.com/users/5120049/vishnudev"><i class="fa fa-stack-overflow"></i></a></li>
+		    </ul>
 		</div>
-
 	</div>
-
-
+</div>
+<div class="fullscreen background parallax" data-img-width="1366" data-img-height="665" data-diff="100">
+<h1>	</h1>
 </div>
 <script>
 $(document).ready(function() {
-$(".preloader").delay(10).fadeOut("slow");
+$(".preloader").delay(3000).fadeOut("slow");
 });
 $(".next").click(function() {
-   $('html,body').animate({ scrollTop:$(this).parent().next().offset().top}, 'slow');});
+   $('html,body').animate({ scrollTop:$(this).parent().next().offset().top}, 'slow');
+});
+$(document).on('click', '.nav-link', function(event){
+    event.preventDefault();
+});
 </script>
 <script>
 

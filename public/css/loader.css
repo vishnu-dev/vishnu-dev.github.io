@@ -19,6 +19,7 @@
   height:36px;
   opacity:0;
   font-family:Helvetica, Arial, sans-serif;
+  font-size: 30px;
   animation:move 2s linear infinite;
   -o-animation:move 2s linear infinite;
   -moz-animation:move 2s linear infinite;

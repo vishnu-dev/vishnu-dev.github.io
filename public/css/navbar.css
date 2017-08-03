@@ -6,6 +6,7 @@ body {
 .menu {  
   -webkit-filter: url("#shadowed-goo");
           filter: url("#shadowed-goo");
+          z-index:999;
 }
 
 .menu-item, .menu-open-button {
