@@ -3,8 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="google-site-verification" content="ryRbZSWbLQRW3h1Eto6YqOP8sDyjSnDa4UY2v29wGSo" />
-	<link rel="stylesheet" href="css/bootstrap.min.css">	
+	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/loader.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/navbar.css">
@@ -38,63 +37,60 @@
 	  <div>O</div>
 	  <div>L</div>
 	</div>
-  </div>
 </div>
 
 <div class="fullscreen background parallax" style="background-image:url('images/back2.jpg');" data-img-width="1366" data-img-height="665" data-diff="100">
 	<div class="content-a">
-		<div id="name" class="font-bold heading-big">
-			<span id="iam">I'm </span>
-			<span class="element"></span>
-			<span class="typed-cursor"></span>
+		<div id="name" class="center font-bold heading-big">
+			<p id="iam">I'm </p>
+			<p class="element"></p>
+			<p class="typed-cursor"></p>
 		</div>
-		<div>
-			<nav class="menu">
-			  <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open" />
-			  <label class="menu-open-button" for="menu-open">
-			    <span class="hamburger hamburger-1"></span>
-			    <span class="hamburger hamburger-2"></span>
-			    <span class="hamburger hamburger-3"></span>
-			  </label>
+        <nav class="menu scroll-smoother">
+          <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open" />
+          <label class="menu-open-button" for="menu-open">
+            <span class="hamburger hamburger-1"></span>
+            <span class="hamburger hamburger-2"></span>
+            <span class="hamburger hamburger-3"></span>
+          </label>
 
-			  <a data-spy="scroll" href="#banner2" class="menu-item"> <i class="fa fa-user-circle"></i> </a>
-			  <a data-spy="scroll" href="#" class="menu-item"> <i class="fa fa-plus"></i> </a>
-			  <a data-spy="scroll" href="#" class="menu-item"> <i class="fa fa-heart"></i> </a>
-			  <a data-spy="scroll" href="#" class="menu-item"> <i class="fa fa-envelope"></i> </a>
+          <a data-spy="scroll" href="#aboutme" class="menu-item"> <i class="fa fa-user-circle"></i> </a>
+          <a data-spy="scroll" href="#skills" class="menu-item"> <i class="fa fa-plus"></i> </a>
+          <a data-spy="scroll" href="#" class="menu-item"> <i class="fa fa-heart"></i> </a>
+          <a data-spy="scroll" href="#" class="menu-item"> <i class="fa fa-envelope"></i> </a>
 
-			</nav>
-			<!-- filters -->
-			<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-			    <defs>
-			      <filter id="shadowed-goo">
-			          
-			          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
-			          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
-			          <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
-			          <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
-			          <feOffset in="shadow" dx="1" dy="1" result="shadow" />
-			          <feComposite in2="shadow" in="goo" result="goo" />
-			          <feComposite in2="goo" in="SourceGraphic" result="mix" />
-			      </filter>
-			      <filter id="goo">
-			          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
-			          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
-			          <feComposite in2="goo" in="SourceGraphic" result="mix" />
-			      </filter>
-			    </defs>
-			</svg>
-		</div>
-		<a href="#banner2"><div id="arrow" class="text-center"><i id="arrow-icon" class="fa fa-bold fa-3x fa-angle-double-down"></i></div></a>
+        </nav>
+        <!-- filters -->
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <defs>
+              <filter id="shadowed-goo">
+
+                  <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+                  <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                  <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
+                  <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
+                  <feOffset in="shadow" dx="1" dy="1" result="shadow" />
+                  <feComposite in2="shadow" in="goo" result="goo" />
+                  <feComposite in2="goo" in="SourceGraphic" result="mix" />
+              </filter>
+              <filter id="goo">
+                  <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+                  <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                  <feComposite in2="goo" in="SourceGraphic" result="mix" />
+              </filter>
+            </defs>
+        </svg>
+		<div id="arrow" class="scroll-smoother text-center"><a data-spy="scroll" href="#aboutme"><i class="fa fa-chevron-down fa-3x" style="color:#FCCF0D"></i></a></div>
 	</div>
 	
 </div>
-
-<div class="fullscreen background parallax" id="banner2" data-img-width="683" data-img-height="665" data-diff="100">
-	<div id="left"><img src="images/me-in-bw-gold-td.jpg"></div>
-	<div id="right" style="padding-top:10%">
+<div class="horizontalrule"></div>
+<div class="fullscreen background parallax row" id="aboutme" style="margin:0" data-img-width="683" data-img-height="665" data-diff="100">
+	<div class="col-lg-6 col-md-6 col-sm-5 col-xs-12" style="padding: 0"><img src="images/me-in-bw-gold-td.jpg"></div>
+	<div class="col-lg-6 col-md-6 col-sm-5 col-xs-12">
 		<p class="heading-big font-bold text-center">about me</p>
-		<h3 class="text-medium font-medium text-center">I'am a student pursuing my engineering in Computer Science at MVIT. I am a passionate coder and designer.</h3>
-		<div class="social-container">
+		<p class="text-medium font-medium text-center">I'am a student pursuing my engineering in Computer Science at MVIT. I am a passionate coder and designer.</p>
+		<div class="social-container"">
 		    <ul class="social-icons">
 		        <li><a target="_blank" href="https://www.linkedin.com/in/vishnu-dev"><i class="fa fa-linkedin"></i></a></li>
 		        <li><a href="https://github.com/vishnu-dev"><i class="fa fa-github"></i></a></li>
@@ -104,12 +100,56 @@
 		</div>
 	</div>
 </div>
-<div class="fullscreen background parallax" data-img-width="1366" data-img-height="665" data-diff="100">
-<h1>	</h1>
+<div class="horizontalrule"></div>
+<div class="fullscreen background parallax" id="skills" data-img-width="1366" data-img-height="665" data-diff="100">
+    <div class="text-center" style="padding-top: 5%"><h1 class="heading-big font-bold">technical skills</h1></div>
+    <div class="container" id="skill-section" style="padding-top: 5%">
+        <div class="skillbar clearfix " data-percent="85%">
+            <div class="skillbar-title" style="background: #d35400;"><span>C/C++</span></div>
+            <div class="skillbar-bar" style="background: #e67e22;"></div>
+            <div class="skill-bar-percent">85%</div>
+        </div> <!-- End Skill Bar -->
+
+        <div class="skillbar clearfix " data-percent="90%">
+            <div class="skillbar-title" style="background: #2980b9;"><span>HTML/CSS</span></div>
+            <div class="skillbar-bar" style="background: #3498db;"></div>
+            <div class="skill-bar-percent">90%</div>
+        </div> <!-- End Skill Bar -->
+
+        <div class="skillbar clearfix " data-percent="90%">
+            <div class="skillbar-title" style="background: #2c3e50;"><span>JavaScript</span></div>
+            <div class="skillbar-bar" style="background: #2c3e50;"></div>
+            <div class="skill-bar-percent">90%</div>
+        </div> <!-- End Skill Bar -->
+
+        <div class="skillbar clearfix " data-percent="70%">
+            <div class="skillbar-title" style="background: #46465e;"><span>MySQL/MongoDB</span></div>
+            <div class="skillbar-bar" style="background: #5a68a5;"></div>
+            <div class="skill-bar-percent">70%</div>
+        </div> <!-- End Skill Bar -->
+
+        <div class="skillbar clearfix " data-percent="75%">
+            <div class="skillbar-title" style="background: #333333;"><span>Wordpress</span></div>
+            <div class="skillbar-bar" style="background: #525252;"></div>
+            <div class="skill-bar-percent">75%</div>
+        </div> <!-- End Skill Bar -->
+
+        <div class="skillbar clearfix " data-percent="70%">
+            <div class="skillbar-title" style="background: #27ae60;"><span>Node.js</span></div>
+            <div class="skillbar-bar" style="background: #2ecc71;"></div>
+            <div class="skill-bar-percent">70%</div>
+        </div> <!-- End Skill Bar -->
+
+        <div class="skillbar clearfix " data-percent="85%">
+            <div class="skillbar-title" style="background: #124e8c;"><span>Photoshop</span></div>
+            <div class="skillbar-bar" style="background: #4288d0;"></div>
+            <div class="skill-bar-percent">85%</div>
+        </div> <!-- End Skill Bar -->
+    </div>
 </div>
 <script>
 $(document).ready(function() {
-$(".preloader").delay(3000).fadeOut("slow");
+$(".preloader").delay(10).fadeOut("slow");
 });
 $(".next").click(function() {
    $('html,body').animate({ scrollTop:$(this).parent().next().offset().top}, 'slow');
@@ -231,6 +271,28 @@ if(!$("html").hasClass("touch")){
 }
 
 
+</script>
+<script>
+    function isScrolledIntoView(elem)
+    {
+        var docViewTop = $(window).scrollTop();
+        var docViewBottom = docViewTop + $(window).height();
+
+        var elemTop = $(elem).offset().top;
+        var elemBottom = elemTop + $(elem).height()/2;
+
+        if((elemBottom <= docViewBottom) && (elemTop >= docViewTop)) {
+            console.log("here");
+            $('.skillbar').each(function(){
+                $(this).find('.skillbar-bar').animate({
+                    width:$(this).attr('data-percent')
+                },3000);
+            });
+        }
+    }
+    window.setInterval(function(){
+        isScrolledIntoView("#skill-section");
+    }, 500);
 </script>
 
 </body>

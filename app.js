@@ -11,7 +11,7 @@ app.set('view engine', 'handlebars');
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', (request, response) => {  
-  response.render("home");
+  response.render("home")
 });
 
 app.listen(port, (err) => {  

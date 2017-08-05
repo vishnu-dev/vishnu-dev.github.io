@@ -3,7 +3,7 @@ $(document).ready(function(){
   $('body').scrollspy({target: ".navbar", offset: 50});   
 
   // Add smooth scrolling on all links inside the navbar
-  $(".menu a").on('click', function(event) {
+  $(".scroll-smoother a").on('click', function(event) {
     // Make sure this.hash has a value before overriding default behavior
     if (this.hash !== "") {
       // Prevent default anchor click behavior
@@ -24,3 +24,21 @@ $(document).ready(function(){
     }  // End if
   });
 });
+
+function isScrolledIntoView(elem)
+{
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height()/2;
+
+    if((elemBottom <= docViewBottom) && (elemTop >= docViewTop)) {
+        $('.skillbar').each(function(){
+            $(this).find('.skillbar-bar').animate({
+                width:$(this).attr('data-percent')
+            },6000);
+        });
+    }
+}
+setInterval(isScrolledIntoView("#skill-section"),500);

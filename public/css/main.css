@@ -1,12 +1,11 @@
-body{
-  margin:0px;
-  line-height: 1;
-  background-color: #2196F3;
+.horizontalrule{
+  border: 0;
+  clear:both;
+  display:block;
+  background-color:#FFFF00;
+  height: 1px;
 }
-#myDiv{
-  display: none;
-}
-#mylogo{
+#myLogo {
   width: 420px;
   height: 420px;
   position: absolute;
@@ -19,9 +18,11 @@ body{
   height: 100%;
 }
 #right{
-  position: absolute;
-  margin-left:50%;
-  width: 50%;
+    position: absolute;
+    margin-left:50%;
+    width: 50%;
+    overflow: hidden;
+    padding-top: 50px;
 }
 img {
     max-width: 100%;
@@ -71,22 +72,30 @@ img {
 }
 
 #name{
-  text-align: center;
   color: black;
-  position: absolute;
-  top:20%;
-  left: 38%;
   padding:5px;
   font-size:50px;
 }
+.center {
+    line-height: 200px;
+    height: 300px;
+    margin-top:10%;
+    text-align: center;
+}
+
+.center p {
+    line-height: 1.5;
+    display: inline-block;
+
+}
 
 #arrow{
-  position: absolute;
-  width: 100%;
-  bottom: 0px;
-  color: black;
-  padding-bottom: 20px;
-  text-shadow: 2px 2px 10px white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: black;
+    padding-bottom: 20px;
+    text-shadow: 2px 2px 10px black;
 }
 
 #arrow-icon:hover{
@@ -168,30 +177,7 @@ html, body {
   font-weight: 500;
   font-family: 'Montserrat', sans-serif;
 }
-/* responsive text queries */
-@media screen and (max-width: 1366px) {
-  p,.btn,input,div,span,h4 {
-    font-size: 95%;
-  }
-  .heading-big{
-    font-size: 100px;
-  }
-  .text-medium{
-    font-size: 24px;
-  }
-}
 
-@media screen and (max-width: 1000px) {
-  p,.btn,input,div,span,h4 {
-    font-size: 90%;
-  }
-  .heading-big{
-    font-size: 50px;
-  }
-  .text-medium{
-    font-size: 18px;
-  }
-}
 
 .social-container {
   width: 400px;
@@ -263,4 +249,124 @@ html, body {
   color: #fff;
   transform: scale(1.6);
   -webkit-text-fill-color: #fff;
+}
+
+.skillbar {
+  position:relative;
+  display:block;
+  margin-bottom:15px;
+  width:100%;
+  background-color:#2A2927;
+  height:35px;
+  border-radius:3px;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  -webkit-transition:0.4s linear;
+  -moz-transition:0.4s linear;
+  -ms-transition:0.4s linear;
+  -o-transition:0.4s linear;
+  transition:0.4s linear;
+  -webkit-transition-property:width, background-color;
+  -moz-transition-property:width, background-color;
+  -ms-transition-property:width, background-color;
+  -o-transition-property:width, background-color;
+  transition-property:width, background-color;
+}
+
+.skillbar-title {
+  position:absolute;
+  top:0;
+  left:0;
+  width:150px;
+  font-weight:bold;
+  font-size:13px;
+  color:#ffffff;
+  background:#6adcfa;
+  -webkit-border-top-left-radius:3px;
+  -webkit-border-bottom-left-radius:4px;
+  -moz-border-radius-topleft:3px;
+  -moz-border-radius-bottomleft:3px;
+  border-top-left-radius:3px;
+  border-bottom-left-radius:3px;
+}
+
+.skillbar-title span {
+  display:block;
+  background:rgba(0, 0, 0, 0.1);
+  padding:0 20px;
+  height:35px;
+  line-height:35px;
+  -webkit-border-top-left-radius:3px;
+  -webkit-border-bottom-left-radius:3px;
+  -moz-border-radius-topleft:3px;
+  -moz-border-radius-bottomleft:3px;
+  border-top-left-radius:3px;
+  border-bottom-left-radius:3px;
+}
+
+.skillbar-bar {
+  height:35px;
+  width:0;
+  background:#6adcfa;
+  border-radius:3px;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+}
+
+.skill-bar-percent {
+  position:absolute;
+  right:10px;
+  top:0;
+  font-size:11px;
+  height:35px;
+  line-height:35px;
+}
+
+
+/* responsive text queries */
+
+@media screen and (max-width: 1366px) {
+    p,.btn,input,div,span,h4 {
+        font-size: 95%;
+    }
+    .heading-big{
+        font-size: 100px;
+    }
+    .text-medium{
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    p,.btn,input,div,span,h4 {
+        font-size: 100%;
+    }
+    .heading-big{
+        font-size: 35px;
+    }
+    .text-medium{
+        font-size: 10px;
+        padding-bottom: 0px;
+    }
+    .font-medium{
+        padding: 5px;
+    }
+    #right{
+        padding-top: 10px;
+    }
+    .social-icons{
+        font-size: 0.6em;
+    }
+    .social-container{
+        width: 200px;
+        margin-top: 0;
+    }
+    .social-icons a:before{
+        width:30px;
+        height: 30px;
+    }
+    .social-icons i{
+        top:10px;
+        left:10px;
+    }
 }

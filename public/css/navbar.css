@@ -3,7 +3,10 @@ body {
   color: #FCCF0D;
 }
 
-.menu {  
+.menu {
+    position: fixed;
+    top: 3%;
+    left: 3%;
   -webkit-filter: url("#shadowed-goo");
           filter: url("#shadowed-goo");
           z-index:999;
@@ -27,6 +30,8 @@ body {
   transition: transform ease-out 200ms;
   transition: transform ease-out 200ms, -webkit-transform ease-out 200ms;
 }
+
+
 
 .menu-open {
   display: none;
@@ -162,4 +167,10 @@ body {
           transition-duration: 410ms;
   -webkit-transform: translate3d(320px, 0, 0);
           transform: translate3d(320px, 0, 0);
+}
+
+@media screen and (max-width: 500px) {
+    .menu{
+        left:15%;
+    }
 }
