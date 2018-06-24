@@ -250,7 +250,7 @@ html, body {
     font-family: 'Yesteryear', cursive;
 }
 #about p{
-    font-family: 'Alex Brush', cursive;
+    font-family: 'Allura', cursive;
     font-size: 2rem;
     color: white;
 }
@@ -264,6 +264,7 @@ html, body {
     margin: 3%;
 }
 .social-text{
+    font-family: 'Allura', cursive;
     color: white;
 }
 .myhide{
