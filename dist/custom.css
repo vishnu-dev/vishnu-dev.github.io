@@ -1,0 +1,525 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: #2d2d2d;
+}
+
+#load{
+    width:100%;
+    height:100%;
+    position:fixed;
+    z-index:9999;
+    background:url("loading-min.gif") no-repeat center center rgba(0,0,0,1)
+}
+
+#load h1{
+    color: white;
+    opacity: 0.5;
+    font-weight: 700;
+    font-size: 5rem;
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+#home {
+    padding: 0;
+}
+
+#navbar {
+    position: absolute;
+    padding: 0;
+    top: 0;
+    background-color: #181818;
+    /* min-width: 80px; */
+    height: 100%;
+    float: left;
+    z-index: 999;
+}
+#navbar a {
+    text-decoration: none;
+}
+
+.nav-logo {
+    position: relative;
+    color: #08fdd8;
+    font-size: 45px;
+    /* height: 100px; */
+    padding-bottom: 0px;
+    text-align: center;
+}
+
+.nav-icons {
+    position: relative;
+    color: #08fdd8;
+    /* font-size: 3vmax; */
+    padding: 10px;
+    /* height: 100px; */
+    padding-bottom: 0px;
+    text-align: center;
+}
+.nav-icons p {
+    text-align: center;
+    font-size: 12px;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+    font-weight: bolder;
+    display: none;
+}
+.nav-icons img {
+    max-width: 80%;
+    margin: 5px;
+    -webkit-filter: drop-shadow(2px 2px 2px #222);
+    filter: drop-shadow(2px 2px 2px #222);
+}
+.bg {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: linear-gradient(150deg, #77a1d3, #79cbca, #e684ae);
+    /* background-image: linear-gradient(-20deg, #d558c8 0%, #24d292 100%); */
+}
+.myhr {
+    margin: 0;
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: -webkit-linear-gradient(left, #333, #08fdd8, #333);
+    background-image: -moz-linear-gradient(left, #333, #08fdd8, #333);
+    background-image: -ms-linear-gradient(left,#333, #08fdd8, #333);
+    background-image: -o-linear-gradient(left, #333, #08fdd8, #333);
+}
+.content {
+    /* position: absolute;
+    top: 0; */
+    width: 100%;
+    height: 100%;
+}
+.sec-1 {
+    height: 100%;
+    width: 100%;
+    position: relative; 
+    z-index: 20;  
+    background-image: url('png/back.png');
+    background-attachment: fixed;
+}
+.wrapper {
+    /* position: relative; */
+    /* margin-left: 100px;  */
+    height: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+    /* padding-left: 10%;   */
+}
+
+#light {
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    z-index: 1;
+    overflow: visible;
+    background:radial-gradient(ellipse at center, rgba(227,243,247,1) 0%,rgba(10,255,250,0.68) 20%,rgba(125,185,232,0.2) 60%,rgba(125,185,232,0) 80%);
+    -webkit-animation: pulse 3s infinite ease-in-out;
+    -o-animation: pulse 3s infinite ease-in-out;
+    -ms-animation: pulse 3s infinite ease-in-out; 
+    -moz-animation: pulse 3s infinite ease-in-out; 
+    animation: pulse 3s infinite ease-in-out;
+}
+
+@-webkit-keyframes pulse {
+    0% { -webkit-transform: scale(0.6); opacity: 0.7; }
+    50% { -webkit-transform: scale(1); opacity: 1; }
+    100% { -webkit-transform: scale(0.6); opacity: 0.7; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(0.6); opacity: 0.7; }
+    50% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(0.6); opacity: 0.7; }
+}
+
+.wrapper h1 {
+    color: #fdd73d;
+}
+.box-center {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+}
+.font-bold {
+    font-weight: 800;
+    /* font-family: 'Playfair Display', serif; */
+}
+.heading-big {
+    background-image: linear-gradient(270deg, #40e0d0, #ff8c00, #ff0080);
+    background-size: 200% 200%;
+    color:transparent;
+    /*text-shadow: 1px 1px 2px white;*/
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-align: center;
+    -webkit-animation: gradientMove 15s ease infinite;
+    -moz-animation: gradientMove 15s ease infinite;
+    animation: gradientMove 15s ease infinite;
+}
+#greet {
+    font-size: 4vmax;
+    font-family: 'Josefin Slab', serif;
+}
+#intro {
+    font-size: 10vmax;
+    font-family: 'Yesteryear', cursive;
+}
+#domain {
+    font-size: 4vmax;
+    font-family: 'Josefin Slab', serif;
+}
+.heading-big p {
+    margin: 0px;
+}
+@-webkit-keyframes gradientMove {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes gradientMove {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes gradientMove {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+.no-padding {
+    padding: 0;
+}
+
+.potrait{
+    filter: grayscale(0);
+    transition: all 0.8s ease;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+.potrait:hover{
+    filter: grayscale(1);
+}
+
+#skills .card img {
+    transform: translateY(50%);
+}
+
+#skills #logo {
+    background-color: rgba(255,255,255,0.4);
+}
+
+.row-eq-height {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+}
+
+#skills .card {
+    background: linear-gradient(to bottom, #34e89e, #0f3443);
+}
+
+#skills i{
+    font-size: 6rem;
+    padding: 10px;
+}
+
+#projects iframe{
+    min-width: 100%;
+}
+
+.heading-big{
+    font-family: 'Yesteryear', cursive;
+}
+#about p{
+    font-family: 'Alex Brush', cursive;
+    font-size: 2rem;
+    color: white;
+}
+.social-links img{
+    width: 80%;
+    height: 80%;
+    padding: 10%;
+    margin: 10%;
+}
+.social-links button{
+    margin: 3%;
+}
+.social-text{
+    color: white;
+}
+.myhide{
+    visibility: hidden;
+}
+
+#background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.card {
+    background: linear-gradient(to bottom, #eb5757, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    transform-style: preserve-3d;
+}
+
+.card-header {
+    transform: translateZ(30px);    
+}
+
+.card-image img {
+    width: 60% !important;
+    margin: 0 auto;
+    transform: translateZ(30px);
+}
+
+.card-content {
+    color: white;
+    transform: translateZ(30px);
+}
+
+.bold{
+    font-weight: 700;
+}
+
+.card-action {
+    transform: translateZ(30px);    
+}
+
+.card-action img{
+    width: 80%;
+    height: 80%;
+    padding: 10%;
+    margin: 10%;
+}
+
+#gallery .col {
+    padding: 0;
+}
+
+  
+.myrow {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+  
+  /* Create four equal columns that sits next to each other */
+.mycol {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+  
+.mycol img {
+    margin-top: 8px;
+    vertical-align: middle;
+    max-height: 20vh;
+}
+  
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .mycol {
+      flex: 50%;
+    }
+}
+  
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .mycol {
+      flex: 100%;
+    }
+}
+
+#projects .design {
+    padding: 20px;
+}
+  
+#projects .design img {
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.glitch {
+  color: white;
+  font-size: 100px;
+  position: relative;
+  width: 400px;
+  margin: 0 auto;
+}
+
+@keyframes noise-anim {
+  0% {
+    clip: rect(99px, 9999px, 3px, 0);
+  }
+  5% {
+    clip: rect(40px, 9999px, 32px, 0);
+  }
+  10% {
+    clip: rect(22px, 9999px, 15px, 0);
+  }
+  15% {
+    clip: rect(99px, 9999px, 82px, 0);
+  }
+  20% {
+    clip: rect(89px, 9999px, 27px, 0);
+  }
+  25% {
+    clip: rect(69px, 9999px, 60px, 0);
+  }
+  30% {
+    clip: rect(74px, 9999px, 17px, 0);
+  }
+  35% {
+    clip: rect(36px, 9999px, 49px, 0);
+  }
+  40% {
+    clip: rect(49px, 9999px, 1px, 0);
+  }
+  45% {
+    clip: rect(51px, 9999px, 34px, 0);
+  }
+  50% {
+    clip: rect(83px, 9999px, 69px, 0);
+  }
+  55% {
+    clip: rect(86px, 9999px, 1px, 0);
+  }
+  60% {
+    clip: rect(94px, 9999px, 76px, 0);
+  }
+  65% {
+    clip: rect(97px, 9999px, 86px, 0);
+  }
+  70% {
+    clip: rect(25px, 9999px, 95px, 0);
+  }
+  75% {
+    clip: rect(57px, 9999px, 7px, 0);
+  }
+  80% {
+    clip: rect(41px, 9999px, 5px, 0);
+  }
+  85% {
+    clip: rect(65px, 9999px, 32px, 0);
+  }
+  90% {
+    clip: rect(31px, 9999px, 98px, 0);
+  }
+  95% {
+    clip: rect(70px, 9999px, 40px, 0);
+  }
+  100% {
+    clip: rect(15px, 9999px, 18px, 0);
+  }
+}
+.glitch:after {
+  content: attr(data-text);
+  position: absolute;
+  left: 2px;
+  text-shadow: -1px 0 red;
+  top: 0;
+  color: white;
+  background: black;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim 2s infinite linear alternate-reverse;
+}
+
+@keyframes noise-anim-2 {
+  0% {
+    clip: rect(49px, 9999px, 82px, 0);
+  }
+  5% {
+    clip: rect(11px, 9999px, 21px, 0);
+  }
+  10% {
+    clip: rect(20px, 9999px, 54px, 0);
+  }
+  15% {
+    clip: rect(79px, 9999px, 14px, 0);
+  }
+  20% {
+    clip: rect(13px, 9999px, 18px, 0);
+  }
+  25% {
+    clip: rect(19px, 9999px, 54px, 0);
+  }
+  30% {
+    clip: rect(67px, 9999px, 34px, 0);
+  }
+  35% {
+    clip: rect(37px, 9999px, 23px, 0);
+  }
+  40% {
+    clip: rect(26px, 9999px, 55px, 0);
+  }
+  45% {
+    clip: rect(98px, 9999px, 9px, 0);
+  }
+  50% {
+    clip: rect(51px, 9999px, 14px, 0);
+  }
+  55% {
+    clip: rect(7px, 9999px, 20px, 0);
+  }
+  60% {
+    clip: rect(78px, 9999px, 38px, 0);
+  }
+  65% {
+    clip: rect(33px, 9999px, 93px, 0);
+  }
+  70% {
+    clip: rect(45px, 9999px, 72px, 0);
+  }
+  75% {
+    clip: rect(82px, 9999px, 77px, 0);
+  }
+  80% {
+    clip: rect(87px, 9999px, 86px, 0);
+  }
+  85% {
+    clip: rect(3px, 9999px, 92px, 0);
+  }
+  90% {
+    clip: rect(66px, 9999px, 12px, 0);
+  }
+  95% {
+    clip: rect(23px, 9999px, 63px, 0);
+  }
+  100% {
+    clip: rect(17px, 9999px, 50px, 0);
+  }
+}
+.glitch:before {
+  content: attr(data-text);
+  position: absolute;
+  left: -2px;
+  text-shadow: 1px 0 blue;
+  top: 0;
+  color: white;
+  background: black;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim-2 3s infinite linear alternate-reverse;
+}
