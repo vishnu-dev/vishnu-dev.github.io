@@ -116,7 +116,7 @@ html, body {
     /* position: relative; */
     /* margin-left: 100px;  */
     height: 100%;
-    overflow: hidden;
+    /*overflow: hidden;*/
     overflow-y: scroll;
     /* padding-left: 10%;   */
 }
@@ -186,7 +186,7 @@ html, body {
     font-size: 4vmax;
     font-family: 'Josefin Slab', serif;
 }
-.heading-big p {
+.heading-big text {
     margin: 0px;
 }
 @-webkit-keyframes gradientMove {
@@ -523,4 +523,9 @@ html, body {
   overflow: hidden;
   clip: rect(0, 900px, 0, 0);
   animation: noise-anim-2 3s infinite linear alternate-reverse;
+}
+
+.large .carousel-item {
+  width: 400px;
+  height: 400px;
 }
