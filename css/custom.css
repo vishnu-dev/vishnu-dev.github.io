@@ -11,7 +11,7 @@ html, body {
     height:100%;
     position:fixed;
     z-index:9999;
-    background:url("loading-min.gif") no-repeat center center rgba(0,0,0,1)
+    background:url("../png/loading-min.gif") no-repeat center center rgba(0,0,0,1)
 }
 
 #load h1{
@@ -107,9 +107,9 @@ html, body {
 .sec-1 {
     height: 100%;
     width: 100%;
-    position: relative; 
-    z-index: 20;  
-    background-image: url('png/back.png');
+    position: relative;
+    z-index: 20;
+    background-image: url('../png/back.png');
     background-attachment: fixed;
 }
 .wrapper {
@@ -132,8 +132,8 @@ html, body {
     background:radial-gradient(ellipse at center, rgba(227,243,247,1) 0%,rgba(10,255,250,0.68) 20%,rgba(125,185,232,0.2) 60%,rgba(125,185,232,0) 80%);
     -webkit-animation: pulse 3s infinite ease-in-out;
     -o-animation: pulse 3s infinite ease-in-out;
-    -ms-animation: pulse 3s infinite ease-in-out; 
-    -moz-animation: pulse 3s infinite ease-in-out; 
+    -ms-animation: pulse 3s infinite ease-in-out;
+    -moz-animation: pulse 3s infinite ease-in-out;
     animation: pulse 3s infinite ease-in-out;
 }
 
@@ -285,7 +285,7 @@ html, body {
 }
 
 .card-header {
-    transform: translateZ(30px);    
+    transform: translateZ(30px);
 }
 
 .card-image img {
@@ -304,7 +304,7 @@ html, body {
 }
 
 .card-action {
-    transform: translateZ(30px);    
+    transform: translateZ(30px);
 }
 
 .card-action img{
@@ -318,33 +318,33 @@ html, body {
     padding: 0;
 }
 
-  
+
 .myrow {
     display: flex;
     flex-wrap: wrap;
     padding: 0 4px;
 }
-  
+
   /* Create four equal columns that sits next to each other */
 .mycol {
     flex: 25%;
     max-width: 25%;
     padding: 0 4px;
 }
-  
+
 .mycol img {
     margin-top: 8px;
     vertical-align: middle;
     max-height: 20vh;
 }
-  
+
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
     .mycol {
       flex: 50%;
     }
 }
-  
+
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
     .mycol {
@@ -355,7 +355,7 @@ html, body {
 #projects .design {
     padding: 20px;
 }
-  
+
 #projects .design img {
     margin: 0 auto;
     max-width: 100%;
