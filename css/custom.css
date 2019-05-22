@@ -121,6 +121,8 @@ html, body {
     /* padding-left: 10%;   */
 }
 
+.wrapper::-webkit-scrollbar { width: 0 !important }
+
 #light {
     top: 50%;
     left: 50%;
@@ -222,7 +224,7 @@ html, body {
     transform: translateY(50%);
 }
 
-#skills #logo {
+#skills .card-logo {
     background-color: rgba(255,255,255,0.4);
 }
 
@@ -247,11 +249,12 @@ html, body {
 }
 
 .heading-big{
-    font-family: 'Yesteryear', cursive;
+    font-family: 'Abril Fatface', cursive !important;
+    /*font-weight: 600;*/
 }
 #about p{
-    font-family: 'Allura', cursive;
-    font-size: 2rem;
+    font-family: 'Playfair Display', cursive;
+    font-size: 1.5em;
     color: white;
 }
 .social-links img{
