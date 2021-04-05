@@ -1,0 +1,136 @@
+.Experience {
+  padding-top: 5vh;
+}
+
+$gradient-main-color: #852837;
+$gradient-alt-color: #000000;
+$timeline-line-color: #ececec;
+
+.vertical-timeline {
+  max-width: unset !important;
+  &::before {
+    background: $timeline-line-color !important;
+  }
+  .vertical-timeline-element-icon {
+    -webkit-box-shadow: 0 0 0 4px $timeline-line-color, inset 0 2px 0 rgb(0 0 0 / 8%), 0 3px 0 4px rgb(0 0 0 / 5%);
+    box-shadow: 0 0 0 4px $timeline-line-color, inset 0 2px 0 rgb(0 0 0 / 8%), 0 3px 0 4px rgb(0 0 0 / 5%);
+  }
+  .vertical-timeline-element--work:nth-child(odd) .vertical-timeline-element-content {
+    background-color: $gradient-main-color;
+    background-image: linear-gradient(225deg, $gradient-main-color 0%, $gradient-alt-color 75%);
+    text-align: right;
+    .vertical-timeline-element-date {
+      text-align: left;
+    }
+    .Item {
+      flex-direction: row-reverse;
+    }
+  }
+  .vertical-timeline-element--work:nth-child(even) .vertical-timeline-element-content {
+    background-color: $gradient-main-color;
+    background-image: linear-gradient(135deg, $gradient-main-color 0%, $gradient-alt-color 75%);
+    text-align: left;
+    .vertical-timeline-element-date {
+      text-align: right;
+    }
+    .Item {
+      flex-direction: row;
+    }
+  }
+  .vertical-timeline-element--edu:nth-child(odd) .vertical-timeline-element-content {
+    background-color: $gradient-main-color;
+    background-image: linear-gradient(225deg, $gradient-main-color 0%, $gradient-alt-color 75%);
+    text-align: right;
+    .vertical-timeline-element-date {
+      text-align: left;
+    }
+    .Item {
+      flex-direction: row-reverse;
+    }
+  }
+  .vertical-timeline-element--edu:nth-child(even) .vertical-timeline-element-content {
+    background-color: $gradient-main-color;
+    background-image: linear-gradient(135deg, $gradient-main-color 0%, $gradient-alt-color 75%);
+    text-align: left;
+    .vertical-timeline-element-date {
+      text-align: right;
+    }
+    .Item {
+      flex-direction: row;
+    }
+  }
+}
+
+.vertical-timeline-element--edu {
+  .vertical-timeline-element-date {
+    font-size: 2em !important;
+    line-height: 2.3em;
+    padding: 0 !important;
+  }
+  .vertical-timeline-element-content {
+    box-shadow: none;
+    border-radius: 15px;
+  }
+  .vertical-timeline-element-content-arrow {
+    border-right-color: $gradient-main-color;
+  }
+  .vertical-timeline-element-icon {
+    padding: 5px;
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
+  .TimelineImage {
+    background-color: rgba($color: #FFF, $alpha: 0.5);
+    border-radius: 15px;
+    padding: 10px;
+  }
+  .Image img {
+    max-height: 200px;
+  }
+}
+
+.vertical-timeline-element--work {
+  .vertical-timeline-element-date {
+    font-size: 2em !important;
+    line-height: 2.3em;
+    padding: 0 !important;
+  }
+  .vertical-timeline-element-content {
+    box-shadow: none;
+    border-radius: 15px;
+  }
+  .vertical-timeline-element-content-arrow {
+    border-right-color: $gradient-main-color;
+  }
+  .vertical-timeline-element-icon {
+    padding: 5px;
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
+  .TimelineImage {
+    background-color: rgba($color: #FFF, $alpha: 0.5);
+    border-radius: 15px;
+    padding: 10px;
+  }
+  .Image img {
+    max-width: 100px;
+  }
+}
+
+.TimelineImage {
+  max-width: 200px;
+  height: auto;
+}
+
+.Circle {
+  width: 25px;
+  height: 25px;
+  border: 3px solid white;
+  border-radius: 50%;
+}
