@@ -8,7 +8,7 @@
       object-position: bottom;
       height: 90vmin;
       width: auto;
-      z-index: 3;
+      z-index: 2;
     }
   }
   #tsparticles {
@@ -19,17 +19,18 @@
     padding: 0;
     top: 0;
     left: 0;
+    z-index: 0;
   }
 }
 
 .BackgroundCircle {
   background-color: #e9456046;
-  width: 80vmin;
+  width: 70vmin;
   max-width: 90%;
-  height: 80vmin;
+  height: 70vmin;
   border-radius: 50%;
   position: absolute;
   bottom: 0;
-  z-index: 2;
+  z-index: 1;
 }
 

@@ -2,7 +2,6 @@ import React from 'react';
 import './Hero.scss';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import { Box, Typography } from '@material-ui/core';
 import Typed from 'typed.js';
@@ -38,7 +37,7 @@ const Hero = () => {
           </Box>
           <Box clone order={{ xs: 1, sm: 1, md: 2, lg: 2, xl: 2 }} flexGrow={1}>
             <Grid container item xs={12} sm={12} md={6} lg={6} xl={6} alignItems="center">
-              <div style={{ paddingLeft: '10px'}}>
+              <div style={{ paddingLeft: '10px', zIndex: 4 }}>
                 <Typography variant="h3" color="primary" gutterBottom>Hello,</Typography>
                 <Typography variant="h1" color="textPrimary" style={{ fontWeight: 600 }}>I'm Vishnudev</Typography>
                 <Typography variant="h4" color="textPrimary" display="inline" style={{ fontWeight: 200, paddingLeft: 5 }}>I am a </Typography>

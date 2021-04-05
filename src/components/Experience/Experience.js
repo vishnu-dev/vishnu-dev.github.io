@@ -76,7 +76,7 @@ const Experience = () => {
   ];
   return (
     <div className="Experience" id="experience">
-      <Typography variant="h3" className={classes.header}>Work</Typography>
+      <Typography variant="h2" color="secondary" className={classes.header}>Work</Typography>
       <VerticalTimeline>
         {
           work.reverse().map((item, i) => (
@@ -101,7 +101,7 @@ const Experience = () => {
           ))
         }
       </VerticalTimeline>
-      <Typography variant="h3" className={classes.header} >Education</Typography>
+      <Typography variant="h2" color="secondary" className={classes.header} >Education</Typography>
       <VerticalTimeline>
         {
           education.reverse().map((item, i) => (

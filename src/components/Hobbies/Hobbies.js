@@ -56,10 +56,10 @@ const Hobbies = () => {
           <Typography variant="h2" color="secondary" className="Header" gutterBottom>Designs</Typography>
           <PhotoGallery images={designs}></PhotoGallery>
         </Grid>
-        <Grid item style={{paddingTop: '10vh', minHeight: '80vh', minWidth: '500px'}}>
+        {/* <Grid item style={{paddingTop: '10vh', minHeight: '80vh', minWidth: '500px'}}>
           <Typography variant="h2" color="secondary" className="Header" gutterBottom>Others</Typography>
           <iframe src="https://socard.vishnudev.in/#/user/5120049?size=large&gradient=%231e3c72%2C%232a5298" width="100%" height="100%" seamless frameBorder="0" scrolling="no"></iframe>
-        </Grid>
+        </Grid> */}
       </Grid>
     </div>
   );
