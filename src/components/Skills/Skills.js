@@ -5,7 +5,7 @@ import Container from '@material-ui/core/Container';
 import { Typography } from '@material-ui/core';
 import Graph from "react-graph-vis";
 import { range } from '../../Utils';
-import CertficateCard from '../CertficateCard/CertficateCard';
+import CertificateCard from '../CertficateCard/CertificateCard';
 import { certificates } from '../../data/certificates';
 import { motion } from "framer-motion";
 import { makeStyles } from "@material-ui/core";
@@ -152,12 +152,12 @@ const Skills = () => {
             </Grid>
           </Grid>
           <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
-            <Grid container item xs={12} style={{ paddingTop: '20px', maxHeight: '85vh', overflowY: 'scroll' }}>
+            <Grid container item xs={12} justify={"space-around"} style={{ paddingTop: '20px', maxHeight: '85vh', overflowY: 'scroll' }}>
               {
                 certificates.map((certificate, i) => (
-                  <Grid item xs={12} sm={12} md={6} lg={6} xl={6} key={i} style={{padding: '20px 0'}}>
+                  <Grid item xs={12} sm={12} md={5} lg={5} xl={5} key={i} style={{padding: '20px 0'}}>
                     <motion.div animate={{ opacity: 1 }} transition={{ type: "spring", stiffness: 100 }}>
-                      <CertficateCard certData={certificate}></CertficateCard>
+                      <CertificateCard certData={certificate}></CertificateCard>
                     </motion.div>
                   </Grid>
                 ))

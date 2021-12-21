@@ -31,8 +31,8 @@ const About = () => {
               <Typography color="primary" className="Title" variant="h1">ABOUT</Typography>
               <Typography variant="h5" color="textPrimary" align="justify">
                 I’m a full-stack developer and a data science enthusiast from Kerala, 🇮🇳.
-                For the past 3 years, I have worked with startups to transform their ideas into reality.
-                I specialise in the design and development of applications that derive meaningful insights
+                For 3 years, I have worked with startups to transform their ideas into reality.
+                I specialise in the <span color="textPrimary">design</span> and development of applications that derive meaningful insights
                 from data, visualise them in a user-friendly manner and assist in the making of business decisions.
                 </Typography>
             </Grid>

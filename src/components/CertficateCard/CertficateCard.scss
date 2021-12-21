@@ -1,22 +1,25 @@
 @import "../../constants/palette";
 
-.CertficateCard {
+.CertificateCard {
   width: 100%;
   color: #eee;
-  min-height: 150px;
+  min-height: 130px;
   border-radius: 20px;
   transition: box-shadow 0.5s;
   box-shadow: 1px 1px 30px 1px rgba($primary, 0.3);
+  padding: 5px 20px;
+
   &:hover {
     cursor: pointer;
     box-shadow: 1px 1px 40px 1px rgba($primary, 0.6);
   }
+
   .Image {
     position: relative;
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
     border-radius: 20px;
-    margin: 0 20px;
+    margin-right: 15px;
     .GradientWrapper {
       width: 100%;
       height: 100%;
@@ -27,10 +30,11 @@
       border-radius: 20px;
     }
     img {
-      width: 100px;
-      height: 100px;
+      width: 80px;
+      height: 80px;
       border-radius: 20px;
       background-color: white;
     }
   }
+
 }

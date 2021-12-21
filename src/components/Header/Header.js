@@ -29,7 +29,8 @@ const useStyles = makeStyles((theme) => ({
   header: {
     backgroundColor: 'rgba(0, 0, 0, 0.75)',
     boxShadow: '0 8px 6px -6px #000',
-    paddingTop: '10px'
+    paddingTop: '10px',
+    position: 'fixed'
   },
   menuItem: {
     fontWeight: 'bold',

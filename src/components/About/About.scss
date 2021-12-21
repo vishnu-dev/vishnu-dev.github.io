@@ -1,7 +1,7 @@
 @import "../../constants/palette";
 
 .BorderBox {
-  padding: 4em 3vmax 3vmax 3vmax;
+  padding: 5em 3vmax 3vmax 3vmax;
   position: relative;
   svg {
     position: absolute;
@@ -22,8 +22,8 @@
 }
 
 .MyThumbnail {
-  max-width: 400px;
-  max-height: 400px;
+  max-width: 20em;
+  max-height: 20em;
   border-radius: 50%;
   position: relative;
   img {
