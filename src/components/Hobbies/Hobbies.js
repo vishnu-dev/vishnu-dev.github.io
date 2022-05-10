@@ -23,7 +23,8 @@ const Hobbies = () => {
             ],
             sizes: "(min-width: 480px) 50vw, (min-width: 1024px) 33.3vw, 100vw",
             width: imageData.width,
-            height: imageData.height
+            height: imageData.height,
+            loading: 'lazy'
         };
     };
 
@@ -31,7 +32,7 @@ const Hobbies = () => {
         fetch(cloudinaryPhotosUrl)
             .then(response => response.json())
             .then(data => {
-                setPhotos(data.resources.slice(0, 30).map(image => createImageObject(image)));
+                setPhotos(data.resources.map(image => createImageObject(image)));
             }).catch(error => {
             console.log(error);
         });

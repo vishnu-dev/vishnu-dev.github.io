@@ -43,7 +43,7 @@ const Experience = () => {
         },
         {
             institute: 'Expert PU College Mangalore',
-            examination: 'Department Of Pre-University Education11th and 12th',
+            examination: 'Department Of Pre-University Education - 11th and 12th',
             year: '2012-14',
             image: 'https://res.cloudinary.com/vishnu-dev/image/upload/v1617543637/assets/expert_avygul.jpg'
         },
@@ -92,11 +92,11 @@ const Experience = () => {
                             contentArrowStyle={{borderRightWidth: '7px', borderRightStyle: 'solid'}}
                             date={item.year}
                             iconStyle={{background: PALETTE.background}}
-                            icon={<img src='/edu_and_work/company.png'></img>}
+                            icon={<img src="/edu_and_work/company.png"/>}
                         >
                             <Grid container spacing={2} className="Item">
                                 <Grid item className="Image">
-                                    <img src={item.image} className="TimelineImage"></img>
+                                    <img src={item.image} className="TimelineImage"/>
                                 </Grid>
                                 <Grid item className="Details">
                                     <Typography variant="h5" style={{fontWeight: 600}}>{item.company}</Typography>

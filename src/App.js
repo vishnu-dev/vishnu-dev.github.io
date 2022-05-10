@@ -10,6 +10,7 @@ import Skills from './components/Skills/Skills';
 import Experience from './components/Experience/Experience';
 import Hobbies from './components/Hobbies/Hobbies';
 import Footer from './components/Footer/Footer';
+import Projects from "./components/Projects/Projects";
 
 let theme = createTheme(({
     palette: {
@@ -45,6 +46,7 @@ function App() {
                 <About/>
                 <Experience/>
                 <Skills/>
+                <Projects/>
                 <Hobbies/>
                 <Footer/>
             </ThemeProvider>

@@ -4,8 +4,8 @@ import {PALETTE} from '../../constants/Palette';
 import Hero from '../Hero/Hero';
 
 const Home = () => (
-    <section className="Home" id="home" style={{backgroundColor: PALETTE.background, color: PALETTE.secondary}}>
-        <Hero></Hero>
+    <section className="Home" id="home" style={{color: PALETTE.secondary}}>
+        <Hero/>
     </section>
 );
 

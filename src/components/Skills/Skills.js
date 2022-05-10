@@ -148,7 +148,7 @@ const Skills = () => {
                                 getNetwork={network => {
                                     network.stabilize(5);
                                 }}
-                            ></Graph>
+                            />
                         </Grid>
                     </Grid>
                     <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
@@ -159,7 +159,7 @@ const Skills = () => {
                                     <Grid item xs={12} sm={12} md={5} lg={5} xl={5} key={i} style={{padding: '20px 0'}}>
                                         <motion.div animate={{opacity: 1}}
                                                     transition={{type: "spring", stiffness: 100}}>
-                                            <CertificateCard certData={certificate}></CertificateCard>
+                                            <CertificateCard certData={certificate}/>
                                         </motion.div>
                                     </Grid>
                                 ))

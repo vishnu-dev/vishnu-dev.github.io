@@ -1,0 +1,98 @@
+.Projects {
+  min-height: 90vh;
+}
+
+.ProjectName {
+  text-align: right;
+  text-shadow: 2px 2px 10px black;
+}
+
+.ProjectNameActivated {
+  position: relative;
+  text-align: right;
+  padding: 10px;
+  background-color: #222222;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  margin: 0;
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    bottom: -15px;
+    right: 0;
+    height: 15px;
+    width: 15px;
+    border-top-right-radius: 25px;
+    box-shadow: 5px -5px 0 2px #222222;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    top: -15px;
+    right: 0;
+    height: 15px;
+    width: 15px;
+    border-bottom-right-radius: 25px;
+    box-shadow: 2px 5px 0 2px #222222;
+  }
+}
+
+.ProjectNameActivatedFirst {
+  position: relative;
+  text-align: right;
+  padding: 10px;
+  background-color: #222222;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  margin: 0;
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    bottom: -15px;
+    right: 0;
+    height: 15px;
+    width: 15px;
+    border-top-right-radius: 25px;
+    box-shadow: 5px -5px 0 2px #222222;
+  }
+}
+
+.ProjectNameActivatedLast {
+  position: relative;
+  text-align: right;
+  padding: 10px;
+  background-color: #222222;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  margin: 0;
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    top: -15px;
+    right: 0;
+    height: 15px;
+    width: 15px;
+    border-bottom-right-radius: 25px;
+    box-shadow: 2px 5px 0 2px #222222;
+  }
+}
+
+.ProjectNameDeactivated {
+  text-align: right;
+  text-shadow: 2px 2px 10px black;
+  padding: 10px;
+  background-color: transparent;
+  margin: 0;
+}
+
+.AdjustmentBox {
+  height: 10px;
+  width: 10px;
+  background-color: #222222;
+  position: absolute;
+  bottom: -10px;
+}
