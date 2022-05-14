@@ -13,7 +13,17 @@ import Footer from './components/Footer/Footer';
 import Projects from "./components/Projects/Projects";
 
 let theme = createTheme(({
+    components: {
+        MuiCard: {
+            styleOverrides: {
+                backgroundColor: {
+                    default: PALETTE.background
+                }
+            }
+        }
+    },
     palette: {
+        type: 'dark',
         primary: {
             main: PALETTE.primary,
         },

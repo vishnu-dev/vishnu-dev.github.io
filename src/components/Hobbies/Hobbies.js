@@ -47,18 +47,18 @@ const Hobbies = () => {
 
     return (
         <div className="Hobbies" id="hobbies">
-            <Grid container justifyContent="center">
+            <Grid container justifyContent="center" pt={4}>
                 <Grid item xs={12}>
-                    <Typography variant="h2" color="secondary" className="Header" gutterBottom>Photography</Typography>
+                    <Typography variant="h2" color="secondary" className="Header" gutterBottom pb={4}>Photography</Typography>
                     <PhotoGallery images={photos}/>
                 </Grid>
                 <Grid item xs={12} style={{paddingTop: '10vh'}}>
-                    <Typography variant="h2" color="secondary" className="Header" gutterBottom>Designs</Typography>
+                    <Typography variant="h2" color="secondary" className="Header" gutterBottom pb={4}>Designs</Typography>
                     <PhotoGallery images={designs}/>
                 </Grid>
             </Grid>
             <Grid container justifyContent="center" style={{minHeight: '90vh'}}>
-                <Grid item xs={12} sm={12} md={6} lg={4} xl={4} style={{paddingTop: '10vh'}}>
+                <Grid item xs={8} sm={8} md={6} lg={4} xl={4} style={{paddingTop: '10vh'}}>
                     <Typography variant="h2" color="secondary" className="Header" gutterBottom>Others</Typography>
                     <iframe
                         title="StackOverflow Card"

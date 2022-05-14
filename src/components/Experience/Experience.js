@@ -92,11 +92,11 @@ const Experience = () => {
                             contentArrowStyle={{borderRightWidth: '7px', borderRightStyle: 'solid'}}
                             date={item.year}
                             iconStyle={{background: PALETTE.background}}
-                            icon={<img src="/edu_and_work/company.png"/>}
+                            icon={<img src="/edu_and_work/company.png" alt="Company"/>}
                         >
                             <Grid container spacing={2} className="Item">
                                 <Grid item className="Image">
-                                    <img src={item.image} className="TimelineImage"/>
+                                    <img src={item.image} className="TimelineImage" alt={item.position}/>
                                 </Grid>
                                 <Grid item className="Details">
                                     <Typography variant="h5" style={{fontWeight: 600}}>{item.company}</Typography>
@@ -117,11 +117,11 @@ const Experience = () => {
                             contentArrowStyle={{borderRightWidth: '7px', borderRightStyle: 'solid'}}
                             date={item.year}
                             iconStyle={{background: PALETTE.background}}
-                            icon={<img src='/edu_and_work/hat.png'></img>}
+                            icon={<img src="/edu_and_work/hat.png" alt="EducationIcon"/>}
                         >
                             <Grid container spacing={2} className="Item">
                                 <Grid item className="Image">
-                                    <img src={item.image} className="TimelineImage"></img>
+                                    <img src={item.image} className="TimelineImage" alt="TimelineImage"/>
                                 </Grid>
                                 <Grid item className="Details">
                                     <Typography variant="h5" style={{fontWeight: 600}}>{item.institute}</Typography>
@@ -133,7 +133,7 @@ const Experience = () => {
                 }
             </VerticalTimeline>
             <div className={classes.timelineEnd}>
-                <div className="Circle"></div>
+                <div className="Circle"/>
             </div>
         </div>
     );

@@ -1,4 +1,5 @@
 export const backgroundParticlesConfig = {
+    fullScreen: { enable: false },
     fpsLimit: 60,
     interactivity: {
         events: {
@@ -16,14 +17,14 @@ export const backgroundParticlesConfig = {
                 },
 
             },
-            resize: true,
+            resize: true
         },
         modes: {
             bubble: {
                 distance: 400,
                 duration: 2,
                 opacity: 0.4,
-                size: 10,
+                size: 8,
             },
             push: {
                 quantity: 4,
@@ -45,15 +46,12 @@ export const backgroundParticlesConfig = {
             opacity: 0.5,
             width: 0.8,
         },
-        collisions: {
-            enable: true,
-        },
         move: {
             direction: "none",
             enable: true,
             outMode: "bounce",
             random: false,
-            speed: 1,
+            speed: 1.5,
             straight: false,
         },
         number: {
@@ -61,10 +59,11 @@ export const backgroundParticlesConfig = {
                 enable: true,
                 area: 1200,
             },
-            value: 80,
+            limit: 120,
+            value: 90,
         },
         opacity: {
-            value: 0.5,
+            value: 0.4,
         },
         shape: {
             type: "circle",
@@ -74,5 +73,5 @@ export const backgroundParticlesConfig = {
             value: 4,
         },
     },
-    detectRetina: true,
+    detectRetina: true
 };

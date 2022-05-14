@@ -6,36 +6,44 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 import {Box, Typography} from '@mui/material';
 import Typed from 'typed.js';
 import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
 import {backgroundParticlesConfig} from '../../data/hero';
 import { motion } from 'framer-motion';
-import {useScrollPercentage} from 'react-scroll-percentage';
+import {isMobile} from 'react-device-detect';
 
 
 const Hero = () => {
     const profilePhotoUrl = 'https://res.cloudinary.com/vishnu-dev/image/upload/q_auto/v1617543640/assets/me-transparent_nblhoc.webp';
     const profilePhotoPreloadUrl = 'https://res.cloudinary.com/vishnu-dev/image/upload/e_blur:500,q_10/v1617543640/assets/me-transparent_nblhoc.webp';
-    const options = {
-        strings: ['Designer', 'Developer', 'Data Scientist'], typeSpeed: 90, startDelay: 100, backSpeed: 50, loop: true
-    };
     const [loaded, setLoaded] = React.useState(false);
-    const [ref, percentage] = useScrollPercentage();
     React.useEffect(() => {
         const el = document.querySelector('.type');
         if (el) {
-            new Typed('.type', options);
+            new Typed('.type', {
+                strings: ['Designer', 'Developer', 'Data Scientist'], typeSpeed: 90, startDelay: 100, backSpeed: 50, loop: true
+            });
         }
     }, []);
+    const particlesInit = async (main) => {
+        // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
+        // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+        // starting from v2 you can add only the features you need reducing the bundle size
+        await loadFull(main);
+    };
     return (
-        <div className="Hero" ref={ref}>
-            <Particles className="Particles" params={backgroundParticlesConfig}/>
+        <div className="Hero">
+            {
+                isMobile ?
+                    <div className="noParticles"/>:
+                    <Particles className="Particles" init={particlesInit} options={backgroundParticlesConfig}/>
+            }
             <Container maxWidth="xl">
                 <Grid container display="flex" style={{height: '100vh'}} justifyContent={'center'}>
                     <Grid container item xs={12} sm={12} md={6} lg={6} xl={6}
                           order={{xs: 2, sm: 2, md: 1, lg: 1, xl: 1}} justifyContent="center" alignItems="flex-end"
                           className="PhotoContainer">
                         <motion.div
-                            className="BackgroundCircle"
-                            style={{scale: 1.5 - (percentage ? percentage : 0.5)}}>
+                            className="BackgroundCircle">
                         </motion.div>
                         {!loaded && <img src={profilePhotoPreloadUrl} alt="Portrait"/>}
                         <img src={profilePhotoUrl} onLoad={(e) => {

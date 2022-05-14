@@ -8,8 +8,8 @@ const CertificateCard = (props) => {
     return (
         <Box className="CertificateCard" style={{background: PALETTE.card}} display="flex" alignItems="center">
             <div className="Image">
-                <div className="GradientWrapper" style={{backgroundImage: props.certData.gradient}}></div>
-                <img src={props.certData.image}></img>
+                <div className="GradientWrapper" style={{backgroundImage: props.certData.gradient}}/>
+                <img src={props.certData.image} alt={props.certData.name}/>
             </div>
             <Box>
                 <Typography gutterBottom>{props.certData.name}</Typography>

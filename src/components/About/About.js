@@ -12,8 +12,8 @@ const About = () => {
     const [ref, percentage] = useScrollPercentage();
     const scrollElementPercentage = useMotionValue(0.5);
     React.useEffect(() => {
-        scrollElementPercentage.set(percentage * 2);
-    }, [percentage]);
+        scrollElementPercentage.set(percentage * 1.75);
+    }, [scrollElementPercentage, percentage]);
     return (
         <div className="About" id="about">
             <Container maxWidth="xl">
@@ -59,7 +59,7 @@ const About = () => {
                                 />
                             </svg>
                             <LazyLoadImage className="Image" src={profilePhotoDark}
-                                           style={{filter: `grayscale(${1 - (percentage * 2)})`}}/>
+                                           style={{filter: `grayscale(${1 - (percentage * 1.75)})`}}/>
                         </div>
                     </Grid>
                 </Grid>

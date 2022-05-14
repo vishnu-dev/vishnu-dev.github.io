@@ -1,82 +1,47 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './Projects.scss';
 import {Grid, Typography} from "@mui/material";
 import ProjectCard from "./ProjectCard/ProjectCard";
-import {motion} from 'framer-motion';
-import {PALETTE} from "../../constants/Palette";
+import {Swiper, SwiperSlide} from "swiper/react";
+import {Autoplay, EffectCards, Navigation} from "swiper";
+import "swiper/css";
+import "swiper/css/effect-cards";
+import "swiper/css/navigation";
+import "swiper/css/autoplay";
 
-const projectsData = {
-    'sygnifai': {
-        name: 'Sygnifai',
-        label: 'Sumyag Data Sciences',
-        description: 'AI powered commercial insurance policy checker',
-        image: 'https://res.cloudinary.com/vishnu-dev/image/upload/v1648980263/assets/projects/sygnifai_nble3q.png'
-    },
-    'resumegini': {
-        name: 'ResumeGini',
-        label: 'Sumyag Data Sciences',
-        description: 'AI powered commercial insurance policy checker',
-        image: 'https://res.cloudinary.com/vishnu-dev/image/upload/v1648980263/assets/projects/sygnifai_nble3q.png'
-    },
-    'spock': {
-        name: 'SPOCK',
-        label: 'Sumyag Data Sciences',
-        description: 'AI powered commercial insurance policy checker',
-        image: 'https://res.cloudinary.com/vishnu-dev/image/upload/v1648980263/assets/projects/sygnifai_nble3q.png'
-    }
-};
+const projectsDataUrl = 'https://res.cloudinary.com/vishnu-dev/raw/upload/v1652435649/assets/projects/data_xwwhul.json';
 
 const Projects = () => {
-    const initialProject = 'sygnifai';
-    const [selectedProject, setSelectedProject] = React.useState(initialProject);
+    const [projectsData, setData] = React.useState({});
+    useEffect(() => {
+        fetch(projectsDataUrl)
+            .then(response => response.json())
+            .then(data => setData(data));
+    });
+
     return (
         <div className="Projects">
             <Typography variant="h2" color="secondary" className="Header" gutterBottom>Projects</Typography>
             <Grid container justifyContent="center">
-                <Grid container item xs={3} justifyContent="right">
-                    <Grid item>
+                <Grid xs={10} md={10} lg={6} xl={6} item pt={4} pb={4}>
+                    <Swiper
+                        effect={"cards"}
+                        grabCursor={true}
+                        navigation={true}
+                        autoplay={{delay: 3000, pauseOnMouseEnter: true, disableOnInteraction: false}}
+                        modules={[EffectCards, Navigation, Autoplay]}
+                        className="mySwiper"
+                    >
                         {
-                            Object.keys(projectsData).map((project, i) => (
-                                <motion.h2
-                                    fontWeight={600}
-                                    onMouseOver={() => setSelectedProject(project)}
-                                    onMouseOut={() => setSelectedProject(initialProject)}
-                                    className={
-                                        project === selectedProject ?
-                                        (
-                                            i === 0 ?
-                                                'ProjectNameActivatedFirst' :
-                                                (
-                                                    i === Object.keys(projectsData).length - 1 ?
-                                                    'ProjectNameActivatedLast' :
-                                                    'ProjectNameActivated'
-                                                )
-                                        ) : 'ProjectNameDeactivated'
-                                    }
-                                    key={i}
-                                    style={{
-                                        color: project === selectedProject ? PALETTE.primary : '#c9c9c9'
-                                    }}>
-                                        {projectsData[project].name}
-                                </motion.h2>
-                            ))
+                            Object.entries(projectsData).map(([key, value], i) => {
+                                return (
+                                    <SwiperSlide key={i}>
+                                        <ProjectCard data={value} style={{margin: '0 auto'}}/>
+                                    </SwiperSlide>
+                                )
+                            })
                         }
-                    </Grid>
-                </Grid>
-                <Grid container item xs={9} justifyContent="left">
-                    <Grid item xs={12} sm={12} md={8} lg={8} xl={8} style={{paddingBottom: '30px'}}>
-                        <ProjectCard
-                            data={projectsData[selectedProject]}
-                            position={
-                                Object.keys(projectsData).indexOf(selectedProject) === 0 ?
-                                    'first' :
-                                    (
-                                        Object.keys(projectsData).indexOf(selectedProject) === Object.keys(projectsData).length - 1 ?
-                                            'last' :
-                                            'middle'
-                                    )
-                            }/>
-                    </Grid>
+                    </Swiper>
                 </Grid>
             </Grid>
         </div>
