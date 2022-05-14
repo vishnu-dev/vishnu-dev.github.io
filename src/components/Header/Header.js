@@ -67,6 +67,7 @@ const Header = (props) => {
         {key: 'home', name: 'Home', link: '#home'},
         {key: 'about', name: 'About', link: '#about'},
         {key: 'experience', name: 'Experience', link: '#experience'},
+        {key: 'projects', name: 'Projects', link: '#projects'},
         {key: 'skills', name: 'Skills', link: '#skills'},
         {key: 'hobbies', name: 'Hobbies', link: '#hobbies'},
         {key: 'contact', name: 'Contact', link: '#contact'},
@@ -94,7 +95,7 @@ const Header = (props) => {
                             </Typography>
                         </Box>
                     </AnchorLink>
-                    <Box flexGrow={1}></Box>
+                    <Box flexGrow={1}/>
                     <Box sx={{display: {xs: 'none', sm: 'none', md: 'none', lg: 'block', xl: 'block'}}}>
                         {menuButtons}
                     </Box>
@@ -104,7 +105,7 @@ const Header = (props) => {
                             color="secondary"
                             onClick={handleClickOpen}
                             size="large">
-                            <MenuIcon fontSize="large"></MenuIcon>
+                            <MenuIcon fontSize="large"/>
                         </IconButton>
                     </Box>
                 </Toolbar>
@@ -113,7 +114,7 @@ const Header = (props) => {
                     PaperProps={{style: {backgroundColor: PALETTE.background}}}>
                 <Grid container justifyContent="flex-end">
                     <IconButton aria-label="menu" color="secondary" onClick={handleClose} size="large">
-                        <CloseIcon fontSize="large"></CloseIcon>
+                        <CloseIcon fontSize="large"/>
                     </IconButton>
                 </Grid>
                 <Grid container style={{height: '90vh', paddingTop: '5vh'}} justifyContent="center">

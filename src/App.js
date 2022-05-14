@@ -55,8 +55,8 @@ function App() {
                 <Home/>
                 <About/>
                 <Experience/>
-                <Skills/>
                 <Projects/>
+                <Skills/>
                 <Hobbies/>
                 <Footer/>
             </ThemeProvider>

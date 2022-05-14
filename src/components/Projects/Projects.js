@@ -20,8 +20,8 @@ const Projects = () => {
     });
 
     return (
-        <div className="Projects">
-            <Typography variant="h2" color="secondary" className="Header" gutterBottom>Projects</Typography>
+        <div className="Projects" id="projects">
+            <Typography variant="h2" color="secondary" className="Header" gutterBottom pt={4}>Projects</Typography>
             <Grid container justifyContent="center">
                 <Grid xs={10} md={10} lg={6} xl={6} item pt={4} pb={4}>
                     <Swiper
