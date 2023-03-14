@@ -8,6 +8,7 @@ import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import {PALETTE} from '../../constants/Palette';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
+import { HashLink } from 'react-router-hash-link';
 import Box from '@mui/material/Box';
 import {Dialog, Grid, IconButton, Slide} from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -64,26 +65,39 @@ const Header = (props) => {
         setOpen(false);
     };
     const menu = [
-        {key: 'home', name: 'Home', link: '#home'},
-        {key: 'about', name: 'About', link: '#about'},
-        {key: 'experience', name: 'Experience', link: '#experience'},
-        {key: 'projects', name: 'Projects', link: '#projects'},
-        {key: 'skills', name: 'Skills', link: '#skills'},
-        {key: 'hobbies', name: 'Hobbies', link: '#hobbies'},
-        {key: 'contact', name: 'Contact', link: '#contact'},
+        {key: 'home', name: 'Home', link: '/#home'},
+        {key: 'about', name: 'My story', link: '/#about'},
+        {key: 'experience', name: 'Experience', link: '/#experience'},
+        {key: 'projects', name: 'Projects', link: '/#projects'},
+        {key: 'skills', name: 'Skills', link: '/#skills'},
+        {key: 'hobbies', name: 'Hobbies', link: '/#hobbies'},
+        {key: 'contact', name: 'Contact', link: '/#contact'},
     ];
+
+    const scrollWithOffset = (el) => {
+        const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+        const yOffset = -74;
+        window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' });
+    }
+
     const menuButtons = menu.map(
         menuItem => (
-            <AnchorLink offset="74" href={menuItem.link} key={menuItem.key} className={classes.menuItem}>
+            <HashLink
+                smooth
+                to={menuItem.link}
+                key={menuItem.key}
+                scroll={el => scrollWithOffset(el)}
+                className={classes.menuItem}
+            >
                 <Button>{menuItem.name}</Button>
-            </AnchorLink>
+            </HashLink>
         )
     );
     return (
         <AppBar position="sticky" className={classes.header}>
             <Container maxWidth="lg">
                 <Toolbar className="Toolbar">
-                    <AnchorLink offset="74" href="#home" style={{textDecoration: 'none'}}>
+                    <HashLink to="/#home" style={{textDecoration: 'none'}}>
                         <Box display={{xs: 'none', sm: 'none', md: 'block'}}>
                             <Typography variant="h6" color="primary" className={classes.title}>
                                 V
@@ -94,7 +108,7 @@ const Header = (props) => {
                                 Hello!
                             </Typography>
                         </Box>
-                    </AnchorLink>
+                    </HashLink>
                     <Box flexGrow={1}/>
                     <Box sx={{display: {xs: 'none', sm: 'none', md: 'none', lg: 'block', xl: 'block'}}}>
                         {menuButtons}
@@ -122,11 +136,17 @@ const Header = (props) => {
                         {
                             menu.map(
                                 menuItem => (
-                                    <AnchorLink offset="74" href={menuItem.link} key={menuItem.key}
-                                                className={classes.menuItemLarge} onClick={handleClose}>
+                                    <HashLink
+                                        smooth
+                                        to={menuItem.link}
+                                        key={menuItem.key}
+                                        scroll={el => scrollWithOffset(el)}
+                                        className={classes.menuItemLarge}
+                                        onClick={handleClose}
+                                    >
                                         <Typography variant="h1" color="primary" style={{fontWeight: 'bold'}}
                                                     gutterBottom>{menuItem.name}</Typography>
-                                    </AnchorLink>
+                                    </HashLink>
                                 )
                             )
                         }

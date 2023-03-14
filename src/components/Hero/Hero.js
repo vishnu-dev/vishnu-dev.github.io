@@ -61,7 +61,7 @@ const Hero = () => {
                             </Typography>
                             <Typography variant="h4" color="textPrimary" display="inline"
                                         style={{fontWeight: 200, paddingLeft: 5}}>I am a </Typography>
-                            <Typography variant="h4" color="primary" display="inline" style={{fontWeight: 400}}>
+                            <Typography variant="h4" color="secondary" display="inline" style={{fontWeight: 400}}>
                                 <span className="type"/>
                             </Typography>
                         </Box>

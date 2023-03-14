@@ -30,9 +30,9 @@ const About = () => {
                                     vectorEffect="non-scaling-stroke"
                                 />
                             </svg>
-                            <Typography color="primary" className="Title" variant="h1">ABOUT</Typography>
-                            <Typography variant="h5" color="textPrimary" align="justify">
-                                I’m a full-stack developer and a data science enthusiast from Kerala, 🇮🇳.
+                            <Typography color="primary" className="Title" variant="h2">MY STORY</Typography>
+                            <Typography variant="h6" color="textPrimary" align="justify">
+                                I’m a full-stack developer and a data science enthusiast from Kerala, India.
                                 For 3 years, I have worked with startups to transform their ideas into reality.
                                 I specialise in the <span color="textPrimary">design</span> and development of
                                 applications that derive meaningful insights

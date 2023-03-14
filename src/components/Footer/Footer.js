@@ -74,14 +74,13 @@ const Footer = () => {
                         <Grid item xs={12} sm={12} md={6} lg={6} xl={6} className={classes.main}>
                             <Typography variant="h1" style={{fontWeight: 800}}>Let's work together</Typography>
                             <Button
-                                variant="contained"
+                                variant="outlined"
                                 size="large"
-                                color="secondary"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 href={`mailto:contact@vishnudev.in`}
-                                style={{fontWeight: 600, fontSize: '1.2em', marginTop: '20px', textTransform: 'none'}}
-                                startIcon={<MailIcon></MailIcon>}
+                                style={{fontWeight: 600, fontSize: '1.2em', marginTop: '20px', textTransform: 'none', color: 'white'}}
+                                startIcon={<MailIcon/>}
                             >
                                 contact@vishnudev.in
                             </Button>

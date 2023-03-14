@@ -1,7 +1,7 @@
 @import "../../constants/palette";
 
 .BorderBox {
-  padding: 5em 3vmax 3vmax 3vmax;
+  padding: 4em 3vmax 3vmax 3vmax;
   position: relative;
 
   svg {
@@ -14,11 +14,11 @@
 
   .Title {
     background-color: black;
-    color: rgba($primary, 0.35);
+    color: rgba($primary, 0.55);
     font-weight: 800;
     text-align: center;
     position: absolute;
-    top: -3vmax;
+    top: -2vmax;
     padding: 0 20px;
   }
 }

@@ -9,7 +9,7 @@ import "swiper/css/effect-cards";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
 
-const projectsDataUrl = 'https://res.cloudinary.com/vishnu-dev/raw/upload/v1652435649/assets/projects/data_xwwhul.json';
+const projectsDataUrl = 'https://res.cloudinary.com/vishnu-dev/raw/upload/v1678806554/assets/projects/projects_data.json';
 
 const Projects = () => {
     const [projectsData, setData] = React.useState({});
@@ -17,13 +17,13 @@ const Projects = () => {
         fetch(projectsDataUrl)
             .then(response => response.json())
             .then(data => setData(data));
-    });
+    }, []);
 
     return (
         <div className="Projects" id="projects">
             <Typography variant="h2" color="secondary" className="Header" gutterBottom pt={4}>Projects</Typography>
             <Grid container justifyContent="center">
-                <Grid xs={10} md={10} lg={6} xl={6} item pt={4} pb={4}>
+                <Grid xs={10} md={8} lg={6} xl={6} item pt={4} pb={4}>
                     <Swiper
                         effect={"cards"}
                         grabCursor={true}

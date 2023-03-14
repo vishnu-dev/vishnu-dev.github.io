@@ -2,7 +2,7 @@ import React from 'react';
 import Home from './components/Home/Home';
 import Header from './components/Header/Header';
 import About from './components/About/About';
-import {createTheme, responsiveFontSizes, StyledEngineProvider, ThemeProvider,} from '@mui/material/styles';
+import {createTheme, responsiveFontSizes, StyledEngineProvider, ThemeProvider} from '@mui/material/styles';
 import CssBaseline from "@mui/material/CssBaseline";
 import {PALETTE} from './constants/Palette';
 import "./App.scss";
@@ -11,6 +11,12 @@ import Experience from './components/Experience/Experience';
 import Hobbies from './components/Hobbies/Hobbies';
 import Footer from './components/Footer/Footer';
 import Projects from "./components/Projects/Projects";
+import Photography from "./components/Photography/Photography";
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route
+} from "react-router-dom";
 
 let theme = createTheme(({
     components: {
@@ -51,14 +57,25 @@ function App() {
         <StyledEngineProvider injectFirst>
             <ThemeProvider theme={theme}>
                 <CssBaseline/>
-                <Header/>
-                <Home/>
-                <About/>
-                <Experience/>
-                <Projects/>
-                <Skills/>
-                <Hobbies/>
-                <Footer/>
+                <Router>
+                    <Switch>
+                        <Route path={'/photography'}>
+                            <Header/>
+                            <Photography/>
+                            <Footer/>
+                        </Route>
+                        <Route path={'/'}>
+                            <Header/>
+                            <Home/>
+                            <About/>
+                            <Experience/>
+                            <Projects/>
+                            <Skills/>
+                            <Hobbies/>
+                            <Footer/>
+                        </Route>
+                    </Switch>
+                </Router>
             </ThemeProvider>
         </StyledEngineProvider>
     );

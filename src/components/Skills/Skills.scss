@@ -8,3 +8,31 @@
   width: 100%;
   text-align: center;
 }
+
+.vis-right {
+  background: url("../../assets/generic/move-right.png") !important;
+}
+
+.vis-left {
+  background: url("../../assets/generic/move-left.png") !important;
+}
+
+.vis-up {
+  background: url("../../assets/generic/move-up.png") !important;
+}
+
+.vis-down {
+  background: url("../../assets/generic/move-down.png") !important;
+}
+
+.vis-zoomIn {
+  background: url("../../assets/generic/zoom-in.png") !important;
+}
+
+.vis-zoomOut {
+  background: url("../../assets/generic/zoom-out.png") !important;
+}
+
+.vis-zoomExtends {
+  background: url("../../assets/generic/fit-screen.png") !important;
+}

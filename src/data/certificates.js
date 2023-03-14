@@ -6,7 +6,8 @@ export const certificates = [
         url: '',
         gradient: 'linear-gradient(45deg, #b92b27, #1565c0)',
         from: 'Aug 2019',
-        to: 'Dec 2019'
+        to: 'Dec 2019',
+        group: 'data'
     },
     {
         name: 'Introduction to Python',
@@ -15,16 +16,8 @@ export const certificates = [
         url: '',
         gradient: 'linear-gradient(45deg, #9CECFB, #0052D4)',
         from: 'Aug 2019',
-        to: 'Dec 2019'
-    },
-    {
-        name: 'Introduction to SQL',
-        description: 'Datacamp',
-        image: 'https://res.cloudinary.com/vishnu-dev/image/upload/v1617543636/assets/datacamp_poz3jj.png',
-        url: '',
-        gradient: 'linear-gradient(45deg, #9CECFB, #0052D4)',
-        from: 'Aug 2019',
-        to: 'Dec 2019'
+        to: 'Dec 2019',
+        group: 'data'
     },
     {
         name: 'Intermediate Python',
@@ -33,52 +26,58 @@ export const certificates = [
         url: '',
         gradient: 'linear-gradient(45deg, #9CECFB, #0052D4)',
         from: 'Aug 2019',
-        to: 'Dec 2019'
+        to: 'Dec 2019',
+        group: 'data'
     },
     {
-        name: 'Python Data Science Toolbox (Part 1)',
+        name: 'Python Data Science\nToolbox (Part 1)',
         description: 'Datacamp',
         image: 'https://res.cloudinary.com/vishnu-dev/image/upload/v1617543636/assets/datacamp_poz3jj.png',
         url: '',
         gradient: 'linear-gradient(45deg, #9CECFB, #0052D4)',
         from: 'Aug 2019',
-        to: 'Dec 2019'
+        to: 'Dec 2019',
+        group: 'data'
     },
     {
-        name: 'Python Data Science Toolbox (Part 2)',
+        name: 'Python Data Science\nToolbox (Part 2)',
         description: 'Datacamp',
         image: 'https://res.cloudinary.com/vishnu-dev/image/upload/v1617543636/assets/datacamp_poz3jj.png',
         url: '',
         gradient: 'linear-gradient(45deg, #9CECFB, #0052D4)',
         from: 'Aug 2019',
-        to: 'Dec 2019'
+        to: 'Dec 2019',
+        group: 'data'
     },
     {
-        name: 'Introduction to Importing Data in Python',
+        name: 'Introduction to Importing\nData in Python',
         description: 'Datacamp',
         image: 'https://res.cloudinary.com/vishnu-dev/image/upload/v1617543636/assets/datacamp_poz3jj.png',
         url: '',
         gradient: 'linear-gradient(45deg, #9CECFB, #0052D4)',
         from: 'Aug 2019',
-        to: 'Dec 2019'
+        to: 'Dec 2019',
+        group: 'data'
     },
     {
-        name: 'Introduction to Relational Databases in SQL',
+        name: 'Introduction to Relational\nDatabases in SQL',
         description: 'Datacamp',
         image: 'https://res.cloudinary.com/vishnu-dev/image/upload/v1617543636/assets/datacamp_poz3jj.png',
         url: '',
         gradient: 'linear-gradient(45deg, #9CECFB, #0052D4)',
         from: 'Aug 2019',
-        to: 'Dec 2019'
+        to: 'Dec 2019',
+        group: 'data'
     },
     {
-        name: 'Intermediate Importing Data in Python',
+        name: 'Intermediate Importing\nData in Python',
         description: 'Datacamp',
         image: 'https://res.cloudinary.com/vishnu-dev/image/upload/v1617543636/assets/datacamp_poz3jj.png',
         url: '',
         gradient: 'linear-gradient(45deg, #9CECFB, #0052D4)',
         from: 'Aug 2019',
-        to: 'Dec 2019'
+        to: 'Dec 2019',
+        group: 'data'
     },
     {
         name: 'pandas Foundations',
@@ -87,16 +86,18 @@ export const certificates = [
         url: '',
         gradient: 'linear-gradient(45deg, #9CECFB, #0052D4)',
         from: 'Aug 2019',
-        to: 'Dec 2019'
+        to: 'Dec 2019',
+        group: 'data'
     },
     {
-        name: 'Analyzing Police Activity with pandas',
+        name: 'Analyzing Police Activity\nwith pandas',
         description: 'Datacamp',
         image: 'https://res.cloudinary.com/vishnu-dev/image/upload/v1617543636/assets/datacamp_poz3jj.png',
         url: '',
         gradient: 'linear-gradient(45deg, #9CECFB, #0052D4)',
         from: 'Aug 2019',
-        to: 'Dec 2019'
+        to: 'Dec 2019',
+        group: 'data'
     },
     {
         name: 'Cleaning Data in Python',
@@ -105,25 +106,28 @@ export const certificates = [
         url: '',
         gradient: 'linear-gradient(45deg, #9CECFB, #0052D4)',
         from: 'Aug 2019',
-        to: 'Dec 2019'
+        to: 'Dec 2019',
+        group: 'data'
     },
     {
-        name: 'Introduction to Data Visualization in Python',
+        name: 'Introduction to Data\nVisualization in Python',
         description: 'Datacamp',
         image: 'https://res.cloudinary.com/vishnu-dev/image/upload/v1617543636/assets/datacamp_poz3jj.png',
         url: '',
         gradient: 'linear-gradient(45deg, #9CECFB, #0052D4)',
         from: 'Aug 2019',
-        to: 'Dec 2019'
+        to: 'Dec 2019',
+        group: 'data'
     },
     {
-        name: 'Manipulating DataFrames with pandas',
+        name: 'Manipulating DataFrames\nwith pandas',
         description: 'Datacamp',
         image: 'https://res.cloudinary.com/vishnu-dev/image/upload/v1617543636/assets/datacamp_poz3jj.png',
         url: '',
         gradient: 'linear-gradient(45deg, #9CECFB, #0052D4)',
         from: 'Aug 2019',
-        to: 'Dec 2019'
+        to: 'Dec 2019',
+        group: 'data'
     },
     {
         name: 'Java and J2EE',
@@ -132,15 +136,17 @@ export const certificates = [
         url: '',
         gradient: 'linear-gradient(45deg, #b92b27, #1565c0)',
         from: 'June 2016',
-        to: 'July 2016'
+        to: 'July 2016',
+        group: 'web'
     },
     {
-        name: 'C Programming',
-        description: 'Engineers Computer Academy',
-        image: 'https://res.cloudinary.com/vishnu-dev/image/upload/v1617543636/assets/engineers_j2aluf.jpg',
+        name: 'Introduction to SQL',
+        description: 'Datacamp',
+        image: 'https://res.cloudinary.com/vishnu-dev/image/upload/v1617543636/assets/datacamp_poz3jj.png',
         url: '',
-        gradient: 'linear-gradient(45deg, #b92b27, #1565c0)',
-        from: 'Jan 2015',
-        to: 'Feb 2015'
-    },
+        gradient: 'linear-gradient(45deg, #9CECFB, #0052D4)',
+        from: 'Aug 2019',
+        to: 'Dec 2019',
+        group: 'web'
+    }
 ];

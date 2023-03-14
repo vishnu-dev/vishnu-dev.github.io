@@ -5,11 +5,9 @@ import Container from '@mui/material/Container';
 import {Typography} from '@mui/material';
 import Graph from "react-graph-vis";
 import {range} from '../../Utils';
-import CertificateCard from '../CertficateCard/CertificateCard';
 import {certificates} from '../../data/certificates';
-import {motion} from "framer-motion";
 import {makeStyles} from "@mui/styles";
-
+import { v4 as uuidv4 } from 'uuid';
 
 const graph = {
     nodes: [
@@ -47,33 +45,50 @@ const graph = {
         {id: 32, label: "Google APIs", image: "skill-icons/cloud/googleapis.png", group: 'skills'},
         {id: 33, label: "HTTPS/SSL", image: "skill-icons/cloud/ssl.png", group: 'skills'},
         {id: 34, label: "Domain management", image: "skill-icons/cloud/domain.png", group: 'skills'},
+        {id: 35, label: "Certificates", image: "cert-icons/certificate.png", group: 'data'},
+        {id: 36, label: "Certificates", image: "cert-icons/certificate.png", group: 'web'},
+        ...certificates.map((cert, index) => {
+            return {id: 36 + 1 + index, title: cert.name, group: 'certificate', image: "cert-icons/rec.png"};
+        })
     ],
     edges: [
-        {from: 1, to: 2},
-        {from: 1, to: 3},
-        {from: 1, to: 4},
-        {from: 4, to: 24},
-        ...range(5, 17).map(id => ({from: 2, to: id})),            // Web Skills
-        ...range(17, 24).map(id => ({from: 3, to: id})),           // Data Skills
-        ...range(25, 32).map(id => ({from: 24, to: id})),          // AWS Skills
-        ...range(32, 35).map(id => ({from: 4, to: id})),           // Cloud Skills
+        {from: 1, to: 2, length: 600},
+        {from: 1, to: 3, length: 600},
+        {from: 1, to: 4, length: 600},
+        {from: 4, to: 24, length: 300},
+        {from: 3, to: 35, length: 400},
+        {from: 2, to: 36, length: 400},
+        ...range(5, 17).map(id => ({from: 2, to: id, length: 400})),            // Web Skills
+        ...range(17, 24).map(id => ({from: 3, to: id, length: 300})),           // Data Skills
+        ...range(25, 32).map(id => ({from: 24, to: id, length: 300})),          // AWS Skills
+        ...range(32, 35).map(id => ({from: 4, to: id, length: 300})),           // Cloud Skills
+        ...range(37, 50).map(id => ({from: 35, to: id, length: 200})),          // Data Certificates
+        ...range(50, 52).map(id => ({from: 36, to: id, length: 200})),          // Web Certificates
     ]
 };
 
 const graphOptions = {
     autoResize: true,
+    physics: {
+        stabilization: true,
+        barnesHut: {
+            avoidOverlap: 1,
+            centralGravity: 0.05,
+            gravitationalConstant: -10000
+        },
+        minVelocity: 0.5
+    },
     layout: {
-        clusterThreshold: 50,
+        improvedLayout: true,
         hierarchical: {
             enabled: false,
-            parentCentralization: true
+            parentCentralization: true,
         }
     },
     interaction: {
         hover: true,
         navigationButtons: true,
-        keyboard: true,
-        zoomView: false
+        zoomView: true
     },
     nodes: {
         font: {
@@ -82,40 +97,48 @@ const graphOptions = {
         shape: "image"
     },
     edges: {
-        width: 4,
-        hoverWidth: 5.5,
+        width: 12,
+        hoverWidth: 13,
         arrows: {
             to: {
                 enabled: false
             }
         },
-        smooth: true,
+        smooth: {
+            enabled: true,
+            type: 'continuous'
+        },
         color: {inherit: true, opacity: 0.4}
     },
     groups: {
         root: {
             color: '#FF80FF',
-            size: 45,
-            font: {size: 18}
+            size: 100,
+            font: {size: 50}
         },
         web: {
             color: '#00FFFF',
-            size: 40,
-            font: {size: 18}
+            size: 90,
+            font: {size: 50}
         },
         data: {
             color: '#FF4000',
-            size: 40,
-            font: {size: 18}
+            size: 90,
+            font: {size: 50}
         },
         cloud: {
             color: '#40FF80',
-            size: 40,
-            font: {size: 18}
+            size: 90,
+            font: {size: 50}
         },
         skills: {
             color: 'rgb(255, 140, 0)',
-            font: {size: 16}
+            size: 50,
+            font: {size: 40}
+        },
+        certificate: {
+            size: 30,
+            font: {size: 30}
         }
     }
 };
@@ -127,7 +150,9 @@ const useStyles = makeStyles((theme) => ({
         },
         [theme.breakpoints.up('md')]: {
             height: '85vh'
-        }
+        },
+        boxShadow: '0 0 20px 1px' + theme.palette.secondary.main,
+        borderRadius: '15px'
     }
 }));
 
@@ -136,34 +161,20 @@ const Skills = () => {
     return (
         <div className="Skills" id="skills">
             <Container maxWidth="xl">
-                <Grid container spacing={3} style={{minHeight: '100vh'}}>
+                <Grid container spacing={3} justifyContent={'center'} style={{minHeight: '100vh'}}>
                     <Typography variant="h2" color="secondary" className="Header">
                         Skills & Certifications
                     </Typography>
-                    <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
+                    <Grid item xs={12} sm={12} md={10} lg={10} xl={10}>
                         <Grid container item xs={12} className={classes.graph}>
                             <Graph
                                 graph={graph}
                                 options={graphOptions}
+                                key={uuidv4()}
                                 getNetwork={network => {
-                                    network.stabilize(5);
+                                    // network.stabilize(5);
                                 }}
                             />
-                        </Grid>
-                    </Grid>
-                    <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
-                        <Grid container item xs={12} justifyContent={"space-around"}
-                              style={{paddingTop: '20px', maxHeight: '85vh', overflowY: 'scroll'}}>
-                            {
-                                certificates.map((certificate, i) => (
-                                    <Grid item xs={12} sm={12} md={5} lg={5} xl={5} key={i} style={{padding: '20px 0'}}>
-                                        <motion.div animate={{opacity: 1}}
-                                                    transition={{type: "spring", stiffness: 100}}>
-                                            <CertificateCard certData={certificate}/>
-                                        </motion.div>
-                                    </Grid>
-                                ))
-                            }
                         </Grid>
                     </Grid>
                 </Grid>

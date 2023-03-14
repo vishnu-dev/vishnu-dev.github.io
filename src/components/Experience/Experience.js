@@ -78,6 +78,12 @@ const Experience = () => {
             position: 'Data Scientist',
             image: 'https://res.cloudinary.com/vishnu-dev/image/upload/v1617543638/assets/sumyagds_orsy6m.png',
             year: 2021
+        },
+        {
+            company: 'Siemens Healthineers',
+            position: 'Working student in Big Data Research',
+            image: 'https://res.cloudinary.com/vishnu-dev/image/upload/v1678788662/assets/siemens-healthineers.webp',
+            year: 'Current'
         }
     ];
     return (
