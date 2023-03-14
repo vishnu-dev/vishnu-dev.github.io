@@ -7,7 +7,6 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import {PALETTE} from '../../constants/Palette';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { HashLink } from 'react-router-hash-link';
 import Box from '@mui/material/Box';
 import {Dialog, Grid, IconButton, Slide} from '@mui/material';
