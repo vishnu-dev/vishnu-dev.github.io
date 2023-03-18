@@ -57,14 +57,14 @@ function App() {
         <StyledEngineProvider injectFirst>
             <ThemeProvider theme={theme}>
                 <CssBaseline/>
-                <Router>
+                <Router basename={'https://vishnudev.in'}>
                     <Switch>
-                        <Route path={'/photography'}>
+                        <Route exact path={'/photography'}>
                             <Header/>
                             <Photography/>
                             <Footer/>
                         </Route>
-                        <Route path={'/'}>
+                        <Route exact path={'/'}>
                             <Header/>
                             <Home/>
                             <About/>
