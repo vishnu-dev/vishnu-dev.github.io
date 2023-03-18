@@ -10,13 +10,25 @@ import "swiper/css/navigation";
 import "swiper/css/autoplay";
 
 const projectsDataUrl = 'https://res.cloudinary.com/vishnu-dev/raw/upload/v1678806554/assets/projects/projects_data.json';
+const morphyStarsUrl = 'https://api.github.com/repos/vishnu-dev/Morphy-Music-Visualizer/stargazers';
+
 
 const Projects = () => {
     const [projectsData, setData] = React.useState({});
+    const [morphyStars, setMorphyStars] = React.useState('?');
+
     useEffect(() => {
         fetch(projectsDataUrl)
             .then(response => response.json())
             .then(data => setData(data));
+        fetch(morphyStarsUrl)
+            .then(response => response.json())
+            .then((data) => {
+                setMorphyStars(data.length);
+            })
+            .catch((e) => {
+                console.error(`An error occurred: ${e}`)
+            });
     }, []);
 
     return (
@@ -34,6 +46,9 @@ const Projects = () => {
                     >
                         {
                             Object.entries(projectsData).map(([key, value], i) => {
+                                if (value.name === 'Morphy') {
+                                    value.stars = morphyStars;
+                                }
                                 return (
                                     <SwiperSlide key={i}>
                                         <ProjectCard data={value} style={{margin: '0 auto'}}/>

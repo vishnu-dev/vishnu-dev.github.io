@@ -28,6 +28,7 @@ const About = () => {
                                     style={{pathLength: scrollElementPercentage}}
                                     fill="transparent" stroke="#EEE" strokeWidth="5"
                                     vectorEffect="non-scaling-stroke"
+                                    strokeLinecap="round"
                                 />
                             </svg>
                             <Typography color="primary" className="Title" variant="h2">MY STORY</Typography>
@@ -49,6 +50,7 @@ const About = () => {
                                     d="M 50,5 90,90 5,90 z"
                                     fill="transparent" stroke={PALETTE.primary} strokeWidth="6"
                                     style={{pathLength: scrollElementPercentage}}
+                                    strokeLinecap="round"
                                 />
                             </svg>
                             <svg width="100" height="100" className="SvgCircle">
@@ -56,10 +58,11 @@ const About = () => {
                                     d="M 0, 40 a 40, 40 0 1,0 80,0 a 40, 40 0 1,0 -80,0"
                                     fill="transparent" stroke={PALETTE.primary} strokeWidth="6"
                                     style={{pathLength: scrollElementPercentage}}
+                                    strokeLinecap="round"
                                 />
                             </svg>
                             <LazyLoadImage className="Image" src={profilePhotoDark}
-                                           style={{filter: `grayscale(${1 - (percentage * 1.75)})`}}/>
+                                           style={{filter: `grayscale(${1 - (percentage)})`}}/>
                         </div>
                     </Grid>
                 </Grid>

@@ -5,12 +5,14 @@ import {
     CardActions,
     CardContent,
     CardHeader,
-    CardMedia,
+    CardMedia, Chip,
     Grid,
-    IconButton,
+    IconButton, Link,
     Tooltip,
     Typography
 } from "@mui/material";
+import StarIcon from "@mui/icons-material/Star";
+import GitHubIcon from '@mui/icons-material/GitHub';
 import {PALETTE} from "../../../constants/Palette";
 
 
@@ -31,6 +33,20 @@ const ProjectCard = (props) => {
                                 </Tooltip>
                             ))}
                         </Grid>
+                    </>
+                }
+                action={
+                    <>
+                        {
+                            props.data.link &&
+                            <Link href={props.data.link} target={'_blank'} style={{textDecoration: 'none', paddingRight: '5px'}}>
+                                <Chip variant={'outlined'} color={'primary'} icon={<GitHubIcon/>} label={'GitHub'}/>
+                            </Link>
+                        }
+                        {
+                            props.data.stars &&
+                            <Chip variant={'outlined'} color={'primary'} icon={<StarIcon style={{color: 'gold'}}/>} label={props.data.stars}/>
+                        }
                     </>
                 }
             />

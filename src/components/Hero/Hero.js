@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 import './Hero.scss';
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
@@ -6,16 +6,16 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 import {Box, Typography} from '@mui/material';
 import Typed from 'typed.js';
 import Particles from "react-tsparticles";
+import type { Container as ContainerParticle, Engine } from "tsparticles-engine";
 import { loadFull } from "tsparticles";
 import {backgroundParticlesConfig} from '../../data/hero';
 import { motion } from 'framer-motion';
-import {isMobile} from 'react-device-detect';
-
 
 const Hero = () => {
     const profilePhotoUrl = 'https://res.cloudinary.com/vishnu-dev/image/upload/q_auto/v1617543640/assets/me-transparent_nblhoc.webp';
     const profilePhotoPreloadUrl = 'https://res.cloudinary.com/vishnu-dev/image/upload/e_blur:500,q_10/v1617543640/assets/me-transparent_nblhoc.webp';
     const [loaded, setLoaded] = React.useState(false);
+
     React.useEffect(() => {
         const el = document.querySelector('.type');
         if (el) {
@@ -24,19 +24,27 @@ const Hero = () => {
             });
         }
     }, []);
-    const particlesInit = async (main) => {
-        // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
+
+    const particlesInit = useCallback(async (engine: Engine) => {
+
+        // you can initialize the tsParticles instance (engine) here, adding custom shapes or presets
         // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
         // starting from v2 you can add only the features you need reducing the bundle size
-        await loadFull(main);
-    };
+        await loadFull(engine);
+    }, []);
+
+    const particlesLoaded = useCallback(async (container: ContainerParticle | undefined) => {
+        await console.log(container);
+    }, []);
+
     return (
         <div className="Hero">
-            {
-                isMobile ?
-                    <div className="noParticles"/>:
-                    <Particles className="Particles" init={particlesInit} options={backgroundParticlesConfig}/>
-            }
+            {/*{*/}
+            {/*    isMobile ?*/}
+            {/*        <div className="noParticles"/>:*/}
+            {/*        <Particles className="Particles" init={particlesInit} loaded={particlesLoaded} options={backgroundParticlesConfig}/>*/}
+            {/*}*/}
+            <Particles className="Particles" init={particlesInit} loaded={particlesLoaded} options={backgroundParticlesConfig}/>
             <Container maxWidth="xl">
                 <Grid container display="flex" style={{height: '100vh'}} justifyContent={'center'}>
                     <Grid container item xs={12} sm={12} md={6} lg={6} xl={6}

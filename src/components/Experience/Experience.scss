@@ -1,10 +1,15 @@
-.Experience {
-  padding-top: 5vh;
+:root{
+  --dynamic-height-work: 100%;
+  --dynamic-height-edu: 100%;
 }
 
 $gradient-main-color: #852837;
 $gradient-alt-color: #000000;
 $timeline-line-color: #ececec;
+
+.Experience {
+  padding-top: 5vh;
+}
 
 .vertical-timeline {
   max-width: unset !important;
@@ -18,59 +23,54 @@ $timeline-line-color: #ececec;
     box-shadow: 0 0 0 4px $timeline-line-color, inset 0 2px 0 rgb(0 0 0 / 8%), 0 3px 0 4px rgb(0 0 0 / 5%);
   }
 
-  .vertical-timeline-element--work:nth-child(odd) .vertical-timeline-element-content {
-    background-color: $gradient-main-color;
-    background-image: linear-gradient(225deg, $gradient-main-color 0%, $gradient-alt-color 75%);
-    text-align: right;
+}
 
-    .vertical-timeline-element-date {
+.work::before {
+  height: var(--dynamic-height-work) !important;
+}
+
+.edu::before {
+  height: var(--dynamic-height-edu) !important;
+}
+
+.vertical-timeline--two-columns {
+  .vertical-timeline-element--work:nth-child(even), .vertical-timeline-element--edu:nth-child(even) {
+    .vertical-timeline-element-content {
+      background-color: $gradient-main-color;
+      background-image: linear-gradient(135deg, $gradient-main-color 0%, $gradient-alt-color 75%);
       text-align: left;
-    }
 
-    .Item {
-      flex-direction: row-reverse;
+      .vertical-timeline-element-date {
+        text-align: right;
+      }
+
+      .Item {
+        flex-direction: row;
+      }
     }
   }
-
-  .vertical-timeline-element--work:nth-child(even) .vertical-timeline-element-content {
-    background-color: $gradient-main-color;
-    background-image: linear-gradient(135deg, $gradient-main-color 0%, $gradient-alt-color 75%);
-    text-align: left;
-
-    .vertical-timeline-element-date {
+  .vertical-timeline-element--work:nth-child(odd), .vertical-timeline-element--edu:nth-child(odd) {
+    .vertical-timeline-element-content {
+      background-color: $gradient-main-color;
+      background-image: linear-gradient(225deg, $gradient-main-color 0%, $gradient-alt-color 75%);
       text-align: right;
-    }
 
-    .Item {
-      flex-direction: row;
-    }
-  }
+      .vertical-timeline-element-date {
+        text-align: left;
+      }
 
-  .vertical-timeline-element--edu:nth-child(odd) .vertical-timeline-element-content {
-    background-color: $gradient-main-color;
-    background-image: linear-gradient(225deg, $gradient-main-color 0%, $gradient-alt-color 75%);
-    text-align: right;
-
-    .vertical-timeline-element-date {
-      text-align: left;
-    }
-
-    .Item {
-      flex-direction: row-reverse;
+      .Item {
+        flex-direction: row-reverse;
+      }
     }
   }
+}
 
-  .vertical-timeline-element--edu:nth-child(even) .vertical-timeline-element-content {
-    background-color: $gradient-main-color;
-    background-image: linear-gradient(135deg, $gradient-main-color 0%, $gradient-alt-color 75%);
-    text-align: left;
-
-    .vertical-timeline-element-date {
-      text-align: right;
-    }
-
-    .Item {
-      flex-direction: row;
+.vertical-timeline--one-column-left {
+  .vertical-timeline-element--work, .vertical-timeline-element--edu {
+    .vertical-timeline-element-content {
+      background-color: $gradient-main-color;
+      background-image: linear-gradient(135deg, $gradient-main-color 0%, $gradient-alt-color 75%);
     }
   }
 }
