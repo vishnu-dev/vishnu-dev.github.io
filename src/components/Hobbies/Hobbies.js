@@ -12,6 +12,7 @@ import Slideshow from "yet-another-react-lightbox/plugins/slideshow";
 import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
+import {Link} from "react-router-dom";
 
 const Hobbies = () => {
     const [photos, setPhotos] = React.useState([]);
@@ -91,14 +92,15 @@ const Hobbies = () => {
                     <PhotoAlbum layout="masonry" photos={photos} spacing={10} onClick={({index}) => setPhotosIndex(index)}/>
                 </Grid>
                 <Grid item xs={12} justifyContent={'center'} textAlign={'center'} className={'view-more'}>
-                    <Button
-                        variant="outlined"
-                        color={'warning'}
-                        style={{fontWeight: 800}}
-                        startIcon={<KeyboardDoubleArrowDownIcon/>}
-                        endIcon={<KeyboardDoubleArrowDownIcon/>}
-                        href={'/photography'}
-                    >Show more</Button>
+                    <Link to={'/photography'} style={{textDecoration: 'none'}}>
+                        <Button
+                            variant="outlined"
+                            color={'warning'}
+                            style={{fontWeight: 800}}
+                            startIcon={<KeyboardDoubleArrowDownIcon/>}
+                            endIcon={<KeyboardDoubleArrowDownIcon/>}
+                        >Show more</Button>
+                    </Link>
                 </Grid>
                 <Grid item xs={12} style={{paddingTop: '10vh'}}>
                     <Typography variant="h2" color="secondary" className="Header" gutterBottom

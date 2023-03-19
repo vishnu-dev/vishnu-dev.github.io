@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './Photography.scss';
 import Lightbox from "yet-another-react-lightbox";
 import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
@@ -7,6 +7,7 @@ import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import {Grid, Typography} from "@mui/material";
 import PhotoAlbum from "react-photo-album";
+import {useLocation} from "react-router-dom";
 
 const Photography = () => {
     const [photos, setPhotos] = React.useState([]);
@@ -38,6 +39,13 @@ const Photography = () => {
             console.log(error);
         });
     }, []);
+
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
+
 
     return (
         <div className="Photography">

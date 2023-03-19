@@ -13,9 +13,8 @@ import Footer from './components/Footer/Footer';
 import Projects from "./components/Projects/Projects";
 import Photography from "./components/Photography/Photography";
 import {
-    BrowserRouter as Router,
     Switch,
-    Route
+    Route, HashRouter
 } from "react-router-dom";
 
 let theme = createTheme(({
@@ -57,7 +56,7 @@ function App() {
         <StyledEngineProvider injectFirst>
             <ThemeProvider theme={theme}>
                 <CssBaseline/>
-                <Router basename={'https://vishnudev.in'}>
+                <HashRouter basename={process.env.BASE_URL}>
                     <Switch>
                         <Route exact path={'/photography'}>
                             <Header/>
@@ -75,7 +74,7 @@ function App() {
                             <Footer/>
                         </Route>
                     </Switch>
-                </Router>
+                </HashRouter>
             </ThemeProvider>
         </StyledEngineProvider>
     );
